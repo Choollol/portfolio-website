@@ -6,17 +6,15 @@ const Footer = () => {
   const date = dayjs(
     new Date(
       lastUpdatedDateData.year,
-      // -1 because months are 0-indexed
-      lastUpdatedDateData.month - 1,
-      lastUpdatedDateData.day
+      lastUpdatedDateData.month - 1, // -1 because months are 0-indexed
     )
   );
-  const lastUpdatedDate: string = date.format("MMMM D, YYYY");
+  const lastUpdatedDate: string = date.format("MMMM YYYY");
 
   return (
-    <div className={styles["footer-container"]}>
+    <footer className={styles["footer-container"]}>
       Last updated: {lastUpdatedDate}
-    </div>
+    </footer>
   );
 };
 

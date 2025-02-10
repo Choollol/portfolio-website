@@ -9,7 +9,7 @@ import HomePageLink from "./HomePageLink/HomePageLink";
 
 const Header = () => {
   return (
-    <div className={styles["header-container"]}>
+    <header className={styles["header-container"]}>
       <div className={styles["header-left-section"]}>
         <HomePageLink />
       </div>
@@ -27,7 +27,7 @@ const Header = () => {
           Links
         </HeaderPageLink>
       </div>
-    </div>
+    </header>
   );
 };
 

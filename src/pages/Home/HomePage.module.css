@@ -1,0 +1,25 @@
+.website-title-container {
+  text-align: center;
+
+  margin-bottom: 100px;
+}
+
+.website-heading {
+  font-size: 300%;
+  
+  margin-bottom: 0px;
+}
+
+.website-sub-heading {
+  font-size: 150%;
+
+  margin-top: 20px;
+}
+
+.section-title {
+  text-align: center;
+
+  font-size: 200%;
+
+  margin: 40px 0px;
+}

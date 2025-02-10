@@ -1,12 +1,16 @@
 :root {
   --text-color: white;
 
+  --alternating-paragraph-side-margin: 40%;
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 20px;
 
   background-color: rgb(49, 49, 49);
 
   color: var(--text-color);
+
+  padding: 10px 40px;
 }
 
 a {
@@ -19,4 +23,15 @@ a:visited {
 
 button {
   cursor: pointer;
+}
+
+p {
+  line-height: 150%;
+}
+
+.alternating-paragraphs-container {
+  display: flex;
+  flex-direction: column;
+
+  margin: 20px 200px;
 }

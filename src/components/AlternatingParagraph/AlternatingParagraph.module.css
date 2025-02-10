@@ -1,0 +1,17 @@
+p {
+  margin: 20px 0px;
+
+  display: inline-block;
+
+  text-wrap: wrap;
+}
+
+.align-left {
+  text-align: left;
+  margin-right: var(--alternating-paragraph-side-margin);
+}
+
+.align-right {
+  text-align: left;
+  margin-left: var(--alternating-paragraph-side-margin);
+}
