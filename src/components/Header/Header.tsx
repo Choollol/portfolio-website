@@ -1,13 +1,34 @@
-import { HOME_PAGE_PATH_ABS } from "@/utils/PagePaths"
-import { Link } from "react-router"
-import styles from "@/components/Header/Header.module.css"
+import {
+  GAMES_PAGE_PATH_ABS,
+  LINKS_PAGE_PATH_ABS,
+  PROJECTS_PAGE_PATH_ABS,
+} from "@/utils/PagePaths";
+import styles from "@/components/Header/Header.module.css";
+import HeaderPageLink from "@/components/Header/HeaderPageLink/HeaderPageLink";
+import HomePageLink from "@/components/Header/HomePageLink/HomePageLink";
 
 const Header = () => {
   return (
     <div className={styles["header-container"]}>
-      <Link to={HOME_PAGE_PATH_ABS} className={styles["home-button"]}>Home</Link>
-    </div>
-  )
-}
+      <div className={styles["header-left-section"]}>
+        <HomePageLink />
+      </div>
 
-export default Header
+      <div className={styles["header-right-section"]}>
+        <HeaderPageLink targetPagePath={GAMES_PAGE_PATH_ABS}>
+          Games
+        </HeaderPageLink>
+
+        <HeaderPageLink targetPagePath={PROJECTS_PAGE_PATH_ABS}>
+          Projects
+        </HeaderPageLink>
+
+        <HeaderPageLink targetPagePath={LINKS_PAGE_PATH_ABS}>
+          Links
+        </HeaderPageLink>
+      </div>
+    </div>
+  );
+};
+
+export default Header;

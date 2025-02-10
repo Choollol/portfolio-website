@@ -1,6 +1,20 @@
 :root {
+  --text-color: white;
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 20px;
+
+  background-color: rgb(49, 49, 49);
+
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
 }
 
 button {
