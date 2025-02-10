@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/">
-          <Route index path={HOME_PAGE_PATH_ABS} element={<HomePage />} />
+          <Route path={HOME_PAGE_PATH_ABS} element={<HomePage />} />
           <Route path={LINKS_PAGE_PATH_ABS} element={<LinksPage />} />
         </Route>
       </Routes>
