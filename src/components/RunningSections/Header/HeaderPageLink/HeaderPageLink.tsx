@@ -1,4 +1,4 @@
-import styles from "@/components/Header/HeaderPageLink/HeaderPageLink.module.css";
+import styles from "./HeaderPageLink.module.css";
 import { ReactNode } from "react";
 import { Link } from "react-router";
 

@@ -3,9 +3,9 @@ import {
   LINKS_PAGE_PATH_ABS,
   PROJECTS_PAGE_PATH_ABS,
 } from "@/utils/PagePaths";
-import styles from "@/components/Header/Header.module.css";
-import HeaderPageLink from "@/components/Header/HeaderPageLink/HeaderPageLink";
-import HomePageLink from "@/components/Header/HomePageLink/HomePageLink";
+import styles from "./Header.module.css";
+import HeaderPageLink from "./HeaderPageLink/HeaderPageLink";
+import HomePageLink from "./HomePageLink/HomePageLink";
 
 const Header = () => {
   return (
