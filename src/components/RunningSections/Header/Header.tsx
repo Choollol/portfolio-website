@@ -2,7 +2,7 @@ import {
   GAMES_PAGE_PATH_ABS,
   LINKS_PAGE_PATH_ABS,
   PROJECTS_PAGE_PATH_ABS,
-} from "@/utils/PagePaths";
+} from "@/utils/PageUtils";
 import styles from "./Header.module.css";
 import HeaderPageLink from "./HeaderPageLink/HeaderPageLink";
 import HomePageLink from "./HomePageLink/HomePageLink";

@@ -1,5 +1,5 @@
 import styles from "./HomePageLink.module.css";
-import { HOME_PAGE_PATH_ABS } from "@/utils/PagePaths";
+import { HOME_PAGE_PATH_ABS } from "@/utils/PageUtils";
 import { Link } from "react-router";
 
 const HomePageLink = () => {
