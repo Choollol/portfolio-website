@@ -1,15 +1,15 @@
 import AlternatingParagraph from "@/components/AlternatingParagraph/AlternatingParagraph";
 import styles from "./AlternatingSection.module.css";
 import pageStyles from "@/pages/Pages.module.css";
-import { alternateAlign, AlternatingParagraphAlign } from "@/utils/AlternatingParagraphUtils";
+import { alternateAlign, AlternatingParagraphAlign, AlternatingParagraphInfo } from "@/utils/AlternatingParagraphUtils";
 
 interface Props {
   startingAlign?: AlternatingParagraphAlign;
   title: string;
-  textList: string[];
+  info: AlternatingParagraphInfo[];
 }
 
-const AlternatingSection = ({ startingAlign = AlternatingParagraphAlign.LEFT, title, textList }: Props) => {
+const AlternatingSection = ({ startingAlign = AlternatingParagraphAlign.LEFT, title, info }: Props) => {
   let nextId = 0;
 
   let nextAlign = startingAlign;
@@ -23,10 +23,10 @@ const AlternatingSection = ({ startingAlign = AlternatingParagraphAlign.LEFT, ti
   return (
     <>
       <h2 className={styles["section-title"]}>{title}</h2>
-      {textList.map((text) => {
+      {info.map((i) => {
         return (
           <div key={nextId++} className={pageStyles["page-content-container"]}>
-            <AlternatingParagraph text={text} align={getNextAlign()} />
+            <AlternatingParagraph text={i.text} imagePaths={i.imagePaths} align={getNextAlign()} />
           </div>
         );
       })}

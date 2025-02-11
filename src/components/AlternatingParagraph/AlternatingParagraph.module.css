@@ -6,12 +6,12 @@ p {
   text-wrap: wrap;
 }
 
-.align-left {
-  text-align: left;
-  margin-right: var(--alternating-paragraph-side-margin);
+.alternating-paragraph {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.align-right {
-  text-align: left;
-  margin-left: var(--alternating-paragraph-side-margin);
+.alternating-paragraph p {
+  flex: 15;
 }

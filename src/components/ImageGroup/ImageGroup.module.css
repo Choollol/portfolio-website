@@ -1,0 +1,17 @@
+.image-group {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  flex: 10;
+
+  padding: 20px;
+}
+
+.align-left {
+  align-self: flex-start;
+}
+
+.align-right {
+  align-self: flex-end;
+}
