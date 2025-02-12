@@ -13,5 +13,5 @@ p {
 }
 
 .alternating-paragraph p {
-  flex: 15;
+  flex: var(--alternating-paragraph-flex-weight);
 }

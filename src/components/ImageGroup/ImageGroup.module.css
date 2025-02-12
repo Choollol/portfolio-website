@@ -1,11 +1,24 @@
 .image-group {
   display: flex;
+  flex-direction: column;
   align-content: center;
   justify-content: center;
 
-  flex: 10;
+  gap: 10px;
 
-  padding: 20px;
+  flex: var(--image-group-flex-weight);
+
+  padding: 20px 40px;
+
+  /* border: 1px solid black; */
+}
+
+.single-image {
+  align-self: center;
+}
+
+.align-left .align-right {
+  position: "relative";
 }
 
 .align-left {

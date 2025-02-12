@@ -2,6 +2,9 @@
   --text-color: white;
 
   --alternating-paragraph-side-margin: 40%;
+  --alternating-paragraph-flex-weight: 15;
+
+  --image-group-flex-weight: 10;
 }
 
 body {

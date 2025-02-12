@@ -26,7 +26,7 @@ const AlternatingSection = ({ startingAlign = AlternatingParagraphAlign.LEFT, ti
       {info.map((i) => {
         return (
           <div key={nextId++} className={pageStyles["page-content-container"]}>
-            <AlternatingParagraph text={i.text} imagePaths={i.imagePaths} align={getNextAlign()} />
+            <AlternatingParagraph text={i.text} imageInfo={i.imageInfo} align={getNextAlign()} />
           </div>
         );
       })}
