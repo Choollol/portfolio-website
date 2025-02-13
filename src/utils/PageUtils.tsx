@@ -1,7 +1,7 @@
 // ABS suffix: Absolute path
 // REL suffix: Relative path 
 
-export const BASE_URL = "portfolio-website";
+export const BASE_URL = "";
 
 export const HOME_PAGE_PATH_ABS: string = BASE_URL + "/";
 export const GAMES_PAGE_PATH_ABS: string = BASE_URL + "/games";
