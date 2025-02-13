@@ -1,5 +1,5 @@
 export function getImagePath(imagePathRel: string) {
-  return `/images/${imagePathRel}`;
+  return `images/${imagePathRel}`;
 }
 
 export enum ImageSize {
