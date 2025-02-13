@@ -8,6 +8,7 @@ const HomePage = () => {
       <div className={styles["website-title-container"]}>
         <h1 className={styles["website-heading"]}>Christopher Sun</h1>
         <h3 className={styles["website-sub-heading"]}>Portfolio Website</h3>
+        <h1>(Under Construction)</h1>
       </div>
 
       <div>
