@@ -4,7 +4,8 @@
   align-content: center;
   justify-content: center;
 
-  gap: 10px;
+  column-gap: 10px;
+  row-gap: -20px;
 
   flex: var(--image-group-flex-weight);
 

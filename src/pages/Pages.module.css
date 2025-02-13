@@ -8,5 +8,5 @@
   display: flex;
   flex-direction: column;
 
-  margin: 20px 200px;
+  margin: 20px var(--page-content-side-margin);
 }

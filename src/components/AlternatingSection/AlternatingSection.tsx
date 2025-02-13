@@ -1,15 +1,10 @@
 import AlternatingParagraph from "@/components/AlternatingParagraph/AlternatingParagraph";
 import styles from "./AlternatingSection.module.css";
 import pageStyles from "@/pages/Pages.module.css";
-import { alternateAlign, AlternatingParagraphAlign, AlternatingParagraphInfo } from "@/utils/AlternatingParagraphUtils";
+import { alternateAlign, AlternatingParagraphAlign } from "@/utils/AlternatingParagraphUtils";
+import { AlternatingSectionInfo } from "@/utils/AlternatingSectionUtils";
 
-interface Props {
-  startingAlign?: AlternatingParagraphAlign;
-  title: string;
-  info: AlternatingParagraphInfo[];
-}
-
-const AlternatingSection = ({ startingAlign = AlternatingParagraphAlign.LEFT, title, info }: Props) => {
+const AlternatingSection = ({ startingAlign = AlternatingParagraphAlign.LEFT, title, info }: AlternatingSectionInfo) => {
   let nextId = 0;
 
   let nextAlign = startingAlign;

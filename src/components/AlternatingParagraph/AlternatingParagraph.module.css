@@ -2,14 +2,14 @@ p {
   margin: 20px 0px;
 
   display: inline-block;
-
-  text-wrap: wrap;
 }
 
 .alternating-paragraph {
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  column-gap: 100px;
 }
 
 .alternating-paragraph p {
