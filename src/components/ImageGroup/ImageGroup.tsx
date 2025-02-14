@@ -1,4 +1,4 @@
-import { getImagePath, ImageInfo, ImageSize } from "@/utils/ImageUtils";
+import { ImageInfo, ImageSize } from "@/utils/ImageUtils";
 import styles from "./ImageGroup.module.css";
 
 interface Props {
@@ -43,7 +43,7 @@ const ImageGroup = ({ imageInfo }: Props) => {
           <img
             key={index}
             className={getImageClassName(index)}
-            src={getImagePath(imagePath)}
+            src={imagePath}
             style={{
               maxWidth: imageMaxWidth,
             }}

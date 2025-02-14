@@ -1,6 +1,5 @@
 import { Link } from "react-router";
 import styles from "./PageSummary.module.css";
-import { getImagePath } from "@/utils/ImageUtils";
 
 interface Props {
   imagePath: string;
@@ -14,7 +13,7 @@ interface Props {
 const PageSummary = ({ imagePath, text, pagePath }: Props) => {
   return (
     <Link to={pagePath} className={styles["page-summary-container"]}>
-      <img className={styles["page-summary-image"]} src={getImagePath(imagePath)} />
+      <img className={styles["page-summary-image"]} src={imagePath} />
       <p className={styles["page-summary-text"]}>{text}</p>
     </Link>
   );

@@ -1,4 +1,6 @@
 import { ImageInfo } from "@/utils/ImageUtils";
+import placeholderImage from "@/assets/images/placeholder.png";
+import largePlaceholderImage from "@/assets/images/placeholder_large.png";
 
 export enum AlternatingParagraphAlign {
   LEFT,
@@ -27,7 +29,7 @@ export function getPlaceholderAlternatingParagraphInfo(
   let imageInfo = [];
   for (let i = 0; i < imageCount; ++i) {
     imageInfo.push({
-      imagePath: isLarge ? "placeholder_large.png" : "placeholder.png",
+      imagePath: isLarge ? largePlaceholderImage : placeholderImage,
     });
   }
   return {
