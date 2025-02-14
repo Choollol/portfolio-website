@@ -1,0 +1,12 @@
+.page-title {
+  text-align: center;
+
+  font-size: 3em;
+}
+
+.page-content-container {
+  display: flex;
+  flex-direction: column;
+
+  margin: 20px var(--page-content-side-margin);
+}

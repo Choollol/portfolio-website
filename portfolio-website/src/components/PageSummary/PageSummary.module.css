@@ -1,0 +1,22 @@
+.page-summary-container {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin: 20px 0px;
+
+  cursor: pointer;
+}
+
+.page-summary-text {
+  display: inline-block;
+}
+
+.page-summary-image {
+  height: 150px;
+}
+
