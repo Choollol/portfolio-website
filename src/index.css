@@ -1,7 +1,7 @@
 :root {
   --text-color: white;
 
-  --page-content-side-margin: 260px;
+  --page-content-side-margin: 300px;
 
   --alternating-paragraph-flex-weight: 20;
 
@@ -18,6 +18,11 @@ body {
   
   padding: 10px 0px;
   margin: 0px;
+}
+
+p a {
+  color: lightblue;
+  text-decoration: underline;
 }
 
 a {

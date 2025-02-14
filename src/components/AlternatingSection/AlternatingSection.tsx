@@ -1,5 +1,5 @@
 import AlternatingParagraph from "@/components/AlternatingParagraph/AlternatingParagraph";
-import styles from "./AlternatingSection.module.css";
+//import styles from "./AlternatingSection.module.css";
 import pageStyles from "@/pages/Pages.module.css";
 import { alternateAlign, AlternatingParagraphAlign } from "@/utils/AlternatingParagraphUtils";
 import { AlternatingSectionInfo } from "@/utils/AlternatingSectionUtils";
@@ -17,7 +17,7 @@ const AlternatingSection = ({ startingAlign = AlternatingParagraphAlign.LEFT, ti
 
   return (
     <>
-      <h2 className={styles["section-title"]}>{title}</h2>
+      <h2 className={pageStyles["section-title"]}>{title}</h2>
       {info.map((i) => {
         return (
           <div key={nextId++} className={pageStyles["page-content-container"]}>

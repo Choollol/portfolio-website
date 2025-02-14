@@ -41,6 +41,7 @@ const ImageGroup = ({ imageInfo }: Props) => {
       {imageInfo.map(({ imagePath }, index) => {
         return (
           <img
+            key={index}
             className={getImageClassName(index)}
             src={getImagePath(imagePath)}
             style={{
