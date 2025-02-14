@@ -6,9 +6,9 @@
 
   height: 60px;
 
-  padding: 10px 30px;
+  padding: 10px 40px;
 
- border-bottom: 1px solid hsl(0, 0%, 86%);
+  border-bottom: 1px solid hsl(0, 0%, 86%);
 }
 
 .header-left-section {

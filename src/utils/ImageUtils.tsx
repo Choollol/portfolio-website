@@ -1,5 +1,6 @@
 export function getImagePath(imagePathRel: string) {
-  return `${import.meta.env.BASE_URL}/public/images/${imagePathRel}`;
+  return `images/${imagePathRel}`;
+  //return `${import.meta.env.BASE_URL}/public/images/${imagePathRel}`;
 }
 
 export enum ImageSize {

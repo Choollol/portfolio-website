@@ -20,7 +20,7 @@ export let introductionData: AlternatingSectionInfo = {
 };
 
 export let currentProjectsData: AlternatingSectionInfo = {
-  title: "Introduction",
+  title: "Current Projects",
   startingAlign: AlternatingParagraphAlign.RIGHT,
   info: [
     {

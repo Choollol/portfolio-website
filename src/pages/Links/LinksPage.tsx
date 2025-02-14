@@ -1,6 +1,6 @@
 import { linksData } from "@/data/page-data/links-page-data";
 import pageStyles from "@/pages/Pages.module.css";
-import "./LinksPage.module.css";
+import styles from "./LinksPage.module.css";
 
 const LinksPage = () => {
   return (
@@ -13,7 +13,7 @@ const LinksPage = () => {
               {linksSectionData.title}
             </h3>
             {linksSectionData.text.map((text, index) => {
-              return <p key={index}>{text}</p>;
+              return <p className={styles["text"]} key={index}>{text}</p>;
             })}
           </div>
         );

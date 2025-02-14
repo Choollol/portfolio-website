@@ -11,13 +11,15 @@ function App() {
     <>
       <Header />
 
-      <Routes>
-        <Route path="/">
-          <Route path={HOME_PAGE_PATH_ABS} element={<HomePage />} />
-          <Route path={GAMES_PAGE_PATH_ABS} element={<GamesOverviewPage />} />
-          <Route path={LINKS_PAGE_PATH_ABS} element={<LinksPage />} />
-        </Route>
-      </Routes>
+      <div className="page-body">
+        <Routes>
+          <Route path="/">
+            <Route path={HOME_PAGE_PATH_ABS} element={<HomePage />} />
+            <Route path={GAMES_PAGE_PATH_ABS} element={<GamesOverviewPage />} />
+            <Route path={LINKS_PAGE_PATH_ABS} element={<LinksPage />} />
+          </Route>
+        </Routes>
+      </div>
 
       <Footer />
     </>

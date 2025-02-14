@@ -1,10 +1,17 @@
 import AlternatingParagraph from "@/components/AlternatingParagraph/AlternatingParagraph";
 //import styles from "./AlternatingSection.module.css";
 import pageStyles from "@/pages/Pages.module.css";
-import { alternateAlign, AlternatingParagraphAlign } from "@/utils/AlternatingParagraphUtils";
+import {
+  alternateAlign,
+  AlternatingParagraphAlign,
+} from "@/utils/AlternatingParagraphUtils";
 import { AlternatingSectionInfo } from "@/utils/AlternatingSectionUtils";
 
-const AlternatingSection = ({ startingAlign = AlternatingParagraphAlign.LEFT, title, info }: AlternatingSectionInfo) => {
+const AlternatingSection = ({
+  startingAlign = AlternatingParagraphAlign.LEFT,
+  title,
+  info,
+}: AlternatingSectionInfo) => {
   let nextId = 0;
 
   let nextAlign = startingAlign;
@@ -18,13 +25,18 @@ const AlternatingSection = ({ startingAlign = AlternatingParagraphAlign.LEFT, ti
   return (
     <>
       <h2 className={pageStyles["section-title"]}>{title}</h2>
-      {info.map((i) => {
-        return (
-          <div key={nextId++} className={pageStyles["page-content-container"]}>
-            <AlternatingParagraph text={i.text} imageInfo={i.imageInfo} align={getNextAlign()} />
-          </div>
-        );
-      })}
+      <div className={pageStyles["page-content-container"]}>
+        {info.map((i) => {
+          return (
+            <AlternatingParagraph
+              key={nextId++}
+              text={i.text}
+              imageInfo={i.imageInfo}
+              align={getNextAlign()}
+            />
+          );
+        })}
+      </div>
     </>
   );
 };
