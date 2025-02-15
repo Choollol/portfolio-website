@@ -6,7 +6,10 @@
 
   height: 60px;
 
+  margin-top: 0px;
   padding: 10px 40px;
+
+  background-color: hsl(0, 0%, 16%);
 
   border-bottom: 1px solid hsl(0, 0%, 86%);
 }

@@ -1,9 +1,9 @@
+import { gamesSummaryData } from "@/data/page-data/games-page-data"
 import OverviewPage from "@/pages/OverviewPages/OverviewPage/OverviewPage"
-import { getPlaceholderPageSummaries } from "@/utils/PageUtils"
 
 const GamesOverviewPage = () => {
   return (
-    <OverviewPage title="Games" pageSummaries={getPlaceholderPageSummaries(3)} />
+    <OverviewPage title="Games" pageSummaries={gamesSummaryData} />
   )
 }
 

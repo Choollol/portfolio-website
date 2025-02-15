@@ -1,5 +1,5 @@
 import PageSummary from "@/components/PageSummary/PageSummary";
-//import styles from "./OverviewPage.module.css";
+import styles from "./OverviewPage.module.css";
 import pageStyles from "@/pages/Pages.module.css";
 import { PageSummaryInfo } from "@/utils/PageUtils";
 
@@ -9,18 +9,17 @@ interface Props {
 }
 
 const OverviewPage = ({ title, pageSummaries }: Props) => {
-  let nextId = 0;
-
   return (
     <>
       <h1 className={pageStyles["page-title"]}>{title}</h1>
-      <div className={pageStyles["page-content-container"]}>
-        {pageSummaries.map((pageSummaryInfo) => {
+      <div
+        className={`${pageStyles["page-content-container"]} ${styles["page-summary-list-container"]}`}
+      >
+        {pageSummaries.map((pageSummaryInfo, index) => {
           return (
-            <PageSummary key={nextId++}
-              imagePath={pageSummaryInfo.imagePath}
-              text={pageSummaryInfo.text}
-              pagePath={pageSummaryInfo.pagePath}
+            <PageSummary
+              key={index}
+              {...pageSummaryInfo}
             />
           );
         })}
