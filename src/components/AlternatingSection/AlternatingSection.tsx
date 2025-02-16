@@ -30,8 +30,7 @@ const AlternatingSection = ({
           return (
             <AlternatingParagraph
               key={nextId++}
-              text={i.text}
-              imageInfo={i.imageInfo}
+              {...i}
               align={getNextAlign()}
             />
           );
