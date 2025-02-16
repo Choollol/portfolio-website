@@ -1,0 +1,33 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 300px;
+  min-height: 400px;
+
+  padding: 10px 20px;
+
+  border: 1px solid white;
+  border-radius: 5px;
+
+  box-shadow: 2px 5px 5px hsl(0, 0%, 0%, 20%);
+
+  background-color: color-mix(in hsl, var(--site-background-color), black 10%);
+
+  transition: background-color 0.2s;
+}
+
+.card-container:hover {
+  background-color: color-mix(in hsl, var(--site-background-color), black 4%);
+}
+
+.card-title {
+  margin-bottom: 0px;
+}
+
+.card-text {
+  display: inline-block;
+
+  text-align: center;
+}

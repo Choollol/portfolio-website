@@ -2,13 +2,10 @@ import placeholderImage from "@/assets/images/placeholder.png";
 import { ImageInfo } from "@/utils/ImageUtils";
 import { ReactNode } from "react";
 
-// ABS suffix: Absolute path
-// REL suffix: Relative path
-
-export const HOME_PAGE_PATH_ABS: string = "/";
-export const GAMES_PAGE_PATH_ABS: string = "/games";
-export const PROJECTS_PAGE_PATH_ABS: string = "/projects";
-export const LINKS_PAGE_PATH_ABS: string = "/links";
+export const HOME_PAGE_PATH: string = "/";
+export const GAMES_PAGE_PATH: string = "/games";
+export const PROJECTS_PAGE_PATH: string = "/projects";
+export const LINKS_PAGE_PATH: string = "/links";
 
 export type PageSummaryInfo = {
   imageInfo: ImageInfo;

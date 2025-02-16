@@ -9,7 +9,7 @@
   margin-top: 0px;
   padding: 10px 40px;
 
-  background-color: hsl(0, 0%, 16%);
+  background-color: color-mix(in hsl, var(--site-background-color), black 8%);
 
   border-bottom: 1px solid hsl(0, 0%, 86%);
 }

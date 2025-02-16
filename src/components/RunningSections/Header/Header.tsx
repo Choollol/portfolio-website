@@ -1,7 +1,7 @@
 import {
-  GAMES_PAGE_PATH_ABS,
-  LINKS_PAGE_PATH_ABS,
-  PROJECTS_PAGE_PATH_ABS,
+  GAMES_PAGE_PATH,
+  LINKS_PAGE_PATH,
+  PROJECTS_PAGE_PATH,
 } from "@/utils/PageUtils";
 import styles from "./Header.module.css";
 import HeaderPageLink from "./HeaderPageLink/HeaderPageLink";
@@ -15,15 +15,15 @@ const Header = () => {
       </div>
 
       <div className={styles["header-right-section"]}>
-        <HeaderPageLink targetPagePath={GAMES_PAGE_PATH_ABS}>
+        <HeaderPageLink targetPagePath={GAMES_PAGE_PATH}>
           Games
         </HeaderPageLink>
 
-        <HeaderPageLink targetPagePath={PROJECTS_PAGE_PATH_ABS}>
+        <HeaderPageLink targetPagePath={PROJECTS_PAGE_PATH}>
           Projects
         </HeaderPageLink>
 
-        <HeaderPageLink targetPagePath={LINKS_PAGE_PATH_ABS}>
+        <HeaderPageLink targetPagePath={LINKS_PAGE_PATH}>
           Links
         </HeaderPageLink>
       </div>
