@@ -13,7 +13,11 @@ const LinksPage = () => {
               {linksSectionData.title}
             </h3>
             {linksSectionData.text.map((text, index) => {
-              return <p className={styles["text"]} key={index}>{text}</p>;
+              return (
+                <p className={styles["text"]} key={index}>
+                  {text}
+                </p>
+              );
             })}
           </div>
         );

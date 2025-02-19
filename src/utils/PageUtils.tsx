@@ -6,6 +6,7 @@ export const HOME_PAGE_PATH: string = "/";
 export const GAMES_PAGE_PATH: string = "/games";
 export const PROJECTS_PAGE_PATH: string = "/projects";
 export const LINKS_PAGE_PATH: string = "/links";
+export const CONTACT_PAGE_PATH: string = "/contact"
 
 export type PageSummaryInfo = {
   imageInfo: ImageInfo;

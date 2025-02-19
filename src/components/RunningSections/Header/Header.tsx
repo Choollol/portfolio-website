@@ -1,4 +1,5 @@
 import {
+  CONTACT_PAGE_PATH,
   GAMES_PAGE_PATH,
   LINKS_PAGE_PATH,
   PROJECTS_PAGE_PATH,
@@ -25,6 +26,10 @@ const Header = () => {
 
         <HeaderPageLink targetPagePath={LINKS_PAGE_PATH}>
           Links
+        </HeaderPageLink>
+        
+        <HeaderPageLink targetPagePath={CONTACT_PAGE_PATH}>
+          Contact
         </HeaderPageLink>
       </div>
     </header>

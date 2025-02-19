@@ -37,13 +37,4 @@ export const linksData: LinksSectionData[] = [
       </>,
     ],
   },
-  // TODO: Move contact into a form that sends me emails
-  {
-    title: "Contact",
-    text: [
-      <>
-        Email: chrisun8@yahoo.com
-      </>,
-    ],
-  },
 ];

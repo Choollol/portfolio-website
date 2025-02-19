@@ -1,0 +1,65 @@
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: top;
+
+  max-width: 700px;
+
+  column-gap: 20px;
+  row-gap: 30px;
+
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.form-label {
+  font-size: 1.5em;
+  width: 140px;
+  align-self: left;
+}
+
+.form-text-input {
+  width: 400px;
+  align-self: right;
+
+  padding: 10px;
+}
+
+.contact-form textarea {
+  height: 8em;
+}
+
+.submit-button {
+  padding: 6px 20px;
+  margin-top: 20px;
+
+  font-size: 1.5em;
+
+  color: white;
+  background-color: color-mix(in hsl, var(--site-background-color), white 5%);
+  border: 2px solid color-mix(in hsl, var(--site-background-color), black 80%);
+  border-radius: 4px;
+
+  box-shadow: 2px 2px 5px hsl(0, 0%, 10%);
+
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: color-mix(in hsl, var(--site-background-color), white 14%);
+}
+
+.submit-error-message,
+.submit-success-message {
+  text-align: center;
+  display: block;
+}
+
+.submit-error-message {
+  color: red;
+}
+
+.submit-success-message {
+  color: hsl(120, 100%, 37%);
+}
