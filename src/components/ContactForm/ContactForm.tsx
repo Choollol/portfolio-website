@@ -20,7 +20,7 @@ export const ContactForm = () => {
   /**
    * @returns Whether the form was successfully submitted.
    */
-  async function sendEmail(actionState: null | FormState, formData: FormData) {
+  async function sendEmail(_actionState: null | FormState, formData: FormData) {
     const templateParams = {
       FROM_NAME: formData.get(FROM_NAME),
       FROM_EMAIL: formData.get(FROM_EMAIL),
