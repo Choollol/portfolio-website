@@ -22,9 +22,9 @@ export const ContactForm = () => {
    */
   async function sendEmail(_actionState: null | FormState, formData: FormData) {
     const templateParams = {
-      FROM_NAME: formData.get(FROM_NAME),
-      FROM_EMAIL: formData.get(FROM_EMAIL),
-      MESSAGE: formData.get(MESSAGE),
+      from_name: formData.get(FROM_NAME),
+      from_email: formData.get(FROM_EMAIL),
+      message: formData.get(MESSAGE),
     };
 
     let didSucceed = true;
@@ -52,7 +52,7 @@ export const ContactForm = () => {
   );
 
   return (
-    <div>
+    <div className={styles["page-content"]}>
       <form action={action} className={styles["contact-form"]}>
         <label className={styles["form-label"]}>Name</label>
         <input
