@@ -7,7 +7,7 @@ type LinksSectionData = {
 
 export const linksData: LinksSectionData[] = [
   {
-    title: "Social Media",
+    title: "Profiles",
     text: [
       <>
         Itch.io:&nbsp;
