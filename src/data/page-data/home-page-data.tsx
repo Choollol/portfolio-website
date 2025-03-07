@@ -8,7 +8,7 @@ import csharpLogo from "@/assets/images/icons/CSharp_Logo.png";
 import minecraftLogo from "@/assets/images/icons/Minecraft_Logo.webp";
 import javaLogo from "@/assets/images/icons/Java_Logo.png";
 
-export let introductionData: AlternatingSectionInfo = {
+export const introductionData: AlternatingSectionInfo = {
   title: "Introduction",
   info: [
     {
@@ -34,18 +34,19 @@ export let introductionData: AlternatingSectionInfo = {
   ],
 };
 
-export let currentProjectsData: AlternatingSectionInfo = {
+export const currentProjectsData: AlternatingSectionInfo = {
   title: "Current Projects",
   startingAlign: AlternatingParagraphAlign.RIGHT,
   info: [
     {
       text: (
         <>
-          I'm currently acting as lead programmer for two game-development
-          teams, both of which are using Unity3D and C#. One is a
-          narrative-driven story game with branching dialogue system and
-          numerous NPC's. The other is a first-person horror game with a
-          hide-and-seek mechanic.
+          I'm currently acting as lead programmer for a game-development
+          team that is using Unity3D and C#. We are developing a
+          narrative-driven story game with branching dialogue system. 
+          Some other features I have added are an NPC 
+          scheduling system, an easy-to-use internal voice lines system,
+          and an interactable-object system.
         </>
       ),
       imageInfo: [
