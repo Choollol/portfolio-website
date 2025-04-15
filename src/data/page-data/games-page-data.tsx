@@ -10,12 +10,26 @@ import untableThumbnail from "@/assets/game_thumbnails/Untable_Thumbnail.png";
 import leftBehindThumbnail from "@/assets/game_thumbnails/Left_Behind_Thumbnail.png";
 import ghostlyReflectionThumbnail from "@/assets/game_thumbnails/Ghostly_Reflection_Thumbnail.png";
 import hedgehogThumbnail from "@/assets/game_thumbnails/Hedgehog_Thumbnail.png";
+import towhereThumbnail from "@/assets/game_thumbnails/Towhere_Thumbnail.png";
 
 function getGameUrl(path: string) {
   return `https://choollol.itch.io/${path}`;
 }
 
 export const gamesSummaryData: PageSummaryInfo[] = [
+  {
+    imageInfo: { imagePath: towhereThumbnail },
+    title: "To Where We Were",
+    text: (
+      <>
+        "To Where We Were" is a walking simulator about being brought to the
+        afterlife. The narrator plays the part of Death, accompanying the
+        protagonist as they find their way to the end. It was made in 48 hours
+        and was my submission to "Spring 2025 VGDC ZotJam."
+      </>
+    ),
+    targetUrl: getGameUrl("to-where-we-were"),
+  },
   {
     imageInfo: { imagePath: hedgehogThumbnail },
     title: "Hedgehog's Dilemma",
