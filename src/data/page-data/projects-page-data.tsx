@@ -2,6 +2,19 @@ import { LinkCardInfo } from "@/utils/LinkCardUtils";
 
 export const projectCards: LinkCardInfo[] = [
   {
+    title: "Muna's Menagerie",
+    text: (
+      <>
+        This is a browser extension that adds pets to your browser! I developed
+        it because I wanted to learn more about web development, and I used
+        TypeScript, React, and a framework called WXT. Clicking this card will
+        open the extension's Google Chrome web store page.
+      </>
+    ),
+    targetUrl:
+      "https://chromewebstore.google.com/detail/munas-menagerie/beejipbnbgcpmhabegicgapojpaggjip",
+  },
+  {
     title: "Portfolio Website",
     text: (
       <>
