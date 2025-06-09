@@ -15,11 +15,11 @@ export const introductionData: AlternatingSectionInfo = {
       text: (
         <>
           I'm Christopher Sun, a first-year Computer Science major at UC Irvine.
-          Some programming languages I know are C#, C, C++, Java, Python, and
-          JavaScript/TypeScript. I have been developing games in Unity for a
-          little over two years, and I'm also coding personal projects in on my
-          own time. One of those projects is this website, which I am developing
-          using React and Vite.
+          I am passionate about software development, especially game
+          development, though I have a wide variety of coding interests. Some
+          programming languages I know are C#, C, C++, Java, Python, and
+          JavaScript/TypeScript. I have been programming for a little over three
+          years, and I'm also coding personal projects in my own time.
         </>
       ),
       imageInfo: [
@@ -41,12 +41,11 @@ export const currentProjectsData: AlternatingSectionInfo = {
     {
       text: (
         <>
-          I'm currently acting as lead programmer for a game-development
-          team that is using Unity3D and C#. We are developing a
-          narrative-driven story game with branching dialogue system. 
-          Some other features I have added are an NPC 
-          scheduling system, an easy-to-use internal voice lines system,
-          and an interactable-object system.
+          I'm currently acting as lead programmer for a game-development team
+          that is using Unity3D and C#. We are developing a narrative-driven
+          story game with branching dialogue system. Some other features I have
+          added are an NPC scheduling system, an easy-to-use internal voice
+          lines system, and an interactable-object system.
         </>
       ),
       imageInfo: [
