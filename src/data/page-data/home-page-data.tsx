@@ -14,8 +14,8 @@ export const introductionData: AlternatingSectionInfo = {
     {
       text: (
         <>
-          I'm Christopher Sun, a first-year Computer Science major at UC Irvine.
-          I am passionate about software development, especially game
+          I'm Christopher Sun, a second-year Computer Science major at UC
+          Irvine. I am passionate about software development, especially game
           development, though I have a wide variety of coding interests. Some
           programming languages I know are C#, C, C++, Java, Python, and
           JavaScript/TypeScript. I have been programming for a little over three
