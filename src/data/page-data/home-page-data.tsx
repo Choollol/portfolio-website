@@ -15,11 +15,12 @@ export const introductionData: AlternatingSectionInfo = {
       text: (
         <>
           I'm Christopher Sun, a second-year Computer Science major at UC
-          Irvine. I am passionate about software development, especially game
-          development, though I have a wide variety of coding interests. Some
-          programming languages I know are C#, C, C++, Java, Python, and
-          JavaScript/TypeScript. I have been programming for a little over three
-          years, and I'm also coding personal projects in my own time.
+          Irvine. I am passionate about software development and I have recently
+          focused on front-end and game development, though I have a wide
+          variety of coding interests. Some programming languages I know are C#,
+          C, C++, Java, Python, and JavaScript/TypeScript. I have been
+          programming for a little over three years, and I'm also coding
+          personal projects in my own time.
         </>
       ),
       imageInfo: [
