@@ -15,12 +15,13 @@ export const introductionData: AlternatingSectionInfo = {
       text: (
         <>
           I'm Christopher Sun, a second-year Computer Science major at UC
-          Irvine. I am passionate about software development and I have recently
-          focused on front-end and game development, though I have a wide
-          variety of coding interests. Some programming languages I know are C#,
-          C, C++, Java, Python, and JavaScript/TypeScript. I have been
-          programming for a little over three years, and I'm also coding
-          personal projects in my own time.
+          Irvine. I am passionate about software development and have been
+          programming for a little over four years. Recently, I have been
+          focused on front-end web development and game development, though I
+          have a wide variety of coding interests. Some programming languages I
+          know are C#, C, C++, Java, Python, and JavaScript/TypeScript. I'm also
+          working on personal projects to apply and improve my skills in my own
+          time.
         </>
       ),
       imageInfo: [
@@ -69,8 +70,8 @@ export const currentProjectsData: AlternatingSectionInfo = {
           </a>
           &nbsp;here at UC Irvine. I am aiding in the development of their
           MindCycle mobile app, created with Unity, to help collect data. I am
-          also developing Minecraft plugins in Java for the lab to help test
-          spatial awareness and memory.
+          also developing Minecraft plugins and addons in Java and TypeScript
+          for the lab to help test spatial awareness and memory.
         </>
       ),
       imageInfo: [
