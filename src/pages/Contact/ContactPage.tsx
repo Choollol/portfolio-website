@@ -1,10 +1,10 @@
 import { ContactForm } from "@/components/ContactForm/ContactForm";
-import pageStyles from "@/pages/Pages.module.css";
+import PageTitle from "@/pages/Common/PageTitle";
 
 const ContactPage = () => {
   return (
     <>
-      <h1 className={pageStyles["page-title"]}>Contact</h1>
+      <PageTitle text="Contact" />
       <ContactForm />
     </>
   );

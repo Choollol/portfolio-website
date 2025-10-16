@@ -8,8 +8,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <HashRouter>
-        <ScrollToTop />
-        <App />
+      <ScrollToTop />
+      <App />
     </HashRouter>
   </StrictMode>
 );

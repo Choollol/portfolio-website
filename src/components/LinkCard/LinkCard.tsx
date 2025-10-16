@@ -1,13 +1,56 @@
 import { LinkCardInfo } from "@/utils/LinkCardUtils";
-import styles from "./LinkCard.module.css";
-import { Link } from "react-router";
+import { Container, Link, Typography } from "@mui/material";
+import { createStyles } from "@/styles/Styling";
+
+const styles = createStyles({
+  cardContainer: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    "&.MuiContainer-root": {
+      margin: 0,
+      padding: 0,
+    },
+  },
+  linkCard: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    maxWidth: "300px",
+    minHeight: "360px",
+    padding: "20px 20px",
+    border: "1px solid white",
+    borderRadius: "5px",
+    boxShadow: "2px 5px 5px hsl(0, 0%, 0%, 20%)",
+    backgroundColor:
+      "color-mix(in hsl, var(--site-background-color), black 10%)",
+    transition: "background-color 0.2s",
+    "&::hover": {
+      backgroundColor:
+        "color-mix(in hsl, var(--site-background-color), black 4%)",
+    },
+  },
+  cardTitle: {
+    marginBottom: "20px",
+  },
+  cardText: {
+    display: "inline-block",
+    textAlign: "center",
+  },
+});
 
 const LinkCard = ({ title, text, targetUrl }: LinkCardInfo) => {
   return (
-    <Link to={targetUrl} className={styles["card-container"]}>
-      <h2 className={styles["card-title"]}>{title}</h2>
-      <p className={styles["card-text"]}>{text}</p>
-    </Link>
+    <Container sx={styles.cardContainer}>
+      <Link href={targetUrl} sx={styles.linkCard}>
+        <Typography variant="h5" sx={styles.cardTitle}>
+          {title}
+        </Typography>
+        <Typography variant="body1" sx={styles.cardText}>
+          {text}
+        </Typography>
+      </Link>
+    </Container>
   );
 };
 

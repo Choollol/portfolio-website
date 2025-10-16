@@ -1,12 +1,87 @@
-import { useActionState } from "react";
+import { ReactElement, useActionState } from "react";
 import emailjs from "@emailjs/browser";
-import styles from "./ContactForm.module.css";
+import { createStyles } from "@/styles/Styling";
+import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 
 enum FormState {
   IDLE,
   SUBMIT_SUCCESS,
   SUBMIT_ERROR,
 }
+
+const styles = createStyles({
+  contentContainer: {
+    display: "grid",
+    gridTemplateColumns: "1fr",
+    justifyItems: "center",
+    margin: "50px 50px",
+    marginBottom: "100px",
+  },
+  contactForm: {
+    justifyContent: "center",
+    maxWidth: "80%",
+  },
+  formLabel: {
+    fontSize: "1.5em",
+    width: "140px",
+    alignSelf: "left",
+  },
+  formTextInput: {
+    color: "black",
+    "& .MuiFilledInput-root": {
+      backgroundColor: "white",
+      "&:hover": {
+        backgroundColor: "white",
+      },
+      "&.Mui-focused": {
+        backgroundColor: "white",
+      },
+    },
+    "& .MuiInputLabel-root": {
+      color: "black",
+      "&.Mui-focused": {
+        color: "black",
+      },
+    },
+  },
+  textArea: {
+    width: "400px",
+    alignSelf: "right",
+    padding: "10px",
+    height: "8em",
+  },
+  submitButtonContainer: {
+    display: "flex",
+    justifyContent: "center",
+  },
+  submitButton: {
+    padding: "6px 20px",
+    margin: "20px 0px",
+    fontSize: "1.5em",
+    color: "white",
+    backgroundColor:
+      "color-mix(in hsl, var(--site-background-color), white 5%)",
+    border:
+      "2px solid color-mix(in hsl, var(--site-background-color), black 80%)",
+    borderRadius: "4px",
+    boxShadow: "2px 2px 5px hsl(0, 0%, 10%)",
+    transition: "background-color 0.2s",
+    "&:hover": {
+      backgroundColor:
+        "color-mix(in hsl, var(--site-background-color), white 14%)",
+    },
+  },
+  submitSuccessText: {
+    textAlign: "center",
+    display: "block",
+    color: "hsl(120, 100%, 37%)",
+  },
+  submitErrorText: {
+    textAlign: "center",
+    display: "block",
+    color: "red",
+  },
+});
 
 const SERVICE_ID = "service_ust1r2e";
 const TEMPLATE_ID = "template_kmuutax";
@@ -46,49 +121,86 @@ export const ContactForm = () => {
     return didSucceed ? FormState.SUBMIT_SUCCESS : FormState.SUBMIT_ERROR;
   }
 
+  const getTextFieldGridItem = (
+    component: ReactElement,
+    isLarge: boolean = false
+  ) => {
+    return <Grid size={{ sm: 12, md: isLarge ? 12 : 6 }}>{component}</Grid>;
+  };
+
   const [actionState, action, isPending] = useActionState(
     sendEmail,
     FormState.IDLE
   );
 
   return (
-    <div className={styles["page-content"]}>
-      <form action={action} className={styles["contact-form"]}>
-        <label className={styles["form-label"]}>Name</label>
-        <input
-          type="text"
-          placeholder="Your name"
-          name={FROM_NAME}
-          required
-          className={styles["form-text-input"]}
-        />
-        <label className={styles["form-label"]}>Email</label>
-        <input
-          type="email"
-          placeholder="example@mail.com"
-          name={FROM_EMAIL}
-          required
-          className={styles["form-text-input"]}
-        />
-        <label className={styles["form-label"]}>Message</label>
-        <textarea
-          placeholder="A message..."
-          name={MESSAGE}
-          required
-          className={styles["form-text-input"]}
-        />
-        <button className={styles["submit-button"]} disabled={isPending}>
-          {isPending ? "Sending..." : "Send"}
-        </button>
-      </form>
+    <Box sx={styles.contentContainer}>
+      <Grid
+        container
+        component="form"
+        action={action}
+        columnSpacing={4}
+        rowSpacing={4}
+        style={styles.contactForm}
+      >
+        {getTextFieldGridItem(
+          <TextField
+            required
+            fullWidth
+            variant="filled"
+            label="Name"
+            placeholder="Your Name"
+            name={FROM_NAME}
+            sx={styles.formTextInput}
+          />
+        )}
+        {getTextFieldGridItem(
+          <TextField
+            required
+            fullWidth
+            variant="filled"
+            type="email"
+            label="Email"
+            placeholder="example@mail.com"
+            name={FROM_EMAIL}
+            sx={styles.formTextInput}
+          />
+        )}
+        {getTextFieldGridItem(
+          <TextField
+            required
+            multiline
+            fullWidth
+            rows={4}
+            variant="filled"
+            label="Message"
+            placeholder="A message..."
+            name={MESSAGE}
+            sx={styles.formTextInput}
+          />,
+          true
+        )}
+        <Grid size={12} sx={styles.submitButtonContainer}>
+          <Button
+            type="submit"
+            style={styles.submitButton}
+            disabled={isPending}
+          >
+            {isPending ? "Sending..." : "Send"}
+          </Button>
+        </Grid>
+      </Grid>
+
       {actionState === FormState.SUBMIT_ERROR && (
-        <p className={styles["submit-error-message"]}>
+        <Typography variant="body1" sx={styles.submitErrorText}>
           An error occured while trying to submit the form.
-        </p>
+        </Typography>
       )}
       {actionState === FormState.SUBMIT_SUCCESS && (
-        <p className={styles["submit-success-message"]}>Message sent!</p>
+        <Typography variant="body1" sx={styles.submitSuccessText}>
+          Message sent!
+        </Typography>
       )}
-    </div>
+    </Box>
   );
 };

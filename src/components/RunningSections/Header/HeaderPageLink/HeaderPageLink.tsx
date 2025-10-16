@@ -1,17 +1,29 @@
-import styles from "./HeaderPageLink.module.css";
+import { Link, Typography } from "@mui/material";
 import { ReactNode } from "react";
-import { Link } from "react-router";
+import { Link as RouterLink } from "react-router";
+import { createStyles } from "@/styles/Styling";
 
 interface Props {
   children: ReactNode;
   targetPagePath: string;
 }
 
+const styles = createStyles({
+  pageLink: {
+    margin: "0px 10px",
+  },
+  text: {
+    fontSize: "1.1em",
+  },
+});
+
 const HeaderPageLink = ({ children, targetPagePath }: Props) => {
   return (
-    <div className={styles["page-link"]}>
-      <Link to={targetPagePath}>{children}</Link>
-    </div>
+    <Link component={RouterLink} to={targetPagePath} sx={styles.pageLink}>
+      <Typography variant="body1" sx={styles.text}>
+        {children}
+      </Typography>
+    </Link>
   );
 };
 

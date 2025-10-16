@@ -1,20 +1,37 @@
-import styles from "./HomePage.module.css";
 import AlternatingSection from "@/components/AlternatingSection/AlternatingSection";
 import * as homePageData from "@/data/page-data/home-page-data";
+import { createStyles } from "@/styles/Styling";
+import { Box, Container, Typography } from "@mui/material";
+
+const styles = createStyles({
+  homePageContainer: {
+    maxWidth: "70%",
+    margin: "20px",
+  },
+  websiteTitleContainer: {
+    textAlign: "center",
+    marginBottom: "100px",
+  },
+  websiteSubheading: {
+    marginTop: "20px",
+  },
+});
 
 const HomePage = () => {
   return (
-    <>
-      <div className={styles["website-title-container"]}>
-        <h1 className={styles["website-heading"]}>Christopher Sun</h1>
-        <h3 className={styles["website-sub-heading"]}>Portfolio Website</h3>
-      </div>
+    <Container sx={styles.homePageContainer}>
+      <Box sx={styles.websiteTitleContainer}>
+        <Typography variant="h2">Christopher Sun</Typography>
+        <Typography variant="h4" sx={styles.websiteSubheading}>
+          Portfolio Website
+        </Typography>
+      </Box>
 
-      <div>
+      <Box>
         <AlternatingSection {...homePageData.introductionData} />
         <AlternatingSection {...homePageData.currentProjectsData} />
-      </div>
-    </>
+      </Box>
+    </Container>
   );
 };
 

@@ -4,35 +4,45 @@ import {
   LINKS_PAGE_PATH,
   PROJECTS_PAGE_PATH,
 } from "@/utils/PageUtils";
-import styles from "./Header.module.css";
 import HeaderPageLink from "./HeaderPageLink/HeaderPageLink";
 import HomePageLink from "./HomePageLink/HomePageLink";
+import { AppBar, Stack } from "@mui/material";
+import { createStyles } from "@/styles/Styling";
+
+const styles = createStyles({
+  headerContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "20px 40px",
+    backgroundColor:
+      "color-mix(in hsl, var(--site-background-color), black 8%)",
+    borderBottom: "1px solid hsl(0, 0%, 86%)",
+  },
+});
 
 const Header = () => {
   return (
-    <header className={styles["header-container"]}>
-      <div className={styles["header-left-section"]}>
+    <AppBar position="static" sx={styles.headerContainer}>
+      <Stack direction="row">
         <HomePageLink />
-      </div>
+      </Stack>
 
-      <div className={styles["header-right-section"]}>
-        <HeaderPageLink targetPagePath={GAMES_PAGE_PATH}>
-          Games
-        </HeaderPageLink>
+      <Stack direction="row">
+        <HeaderPageLink targetPagePath={GAMES_PAGE_PATH}>Games</HeaderPageLink>
 
         <HeaderPageLink targetPagePath={PROJECTS_PAGE_PATH}>
           Projects
         </HeaderPageLink>
 
-        <HeaderPageLink targetPagePath={LINKS_PAGE_PATH}>
-          Links
-        </HeaderPageLink>
-        
+        <HeaderPageLink targetPagePath={LINKS_PAGE_PATH}>Links</HeaderPageLink>
+
         <HeaderPageLink targetPagePath={CONTACT_PAGE_PATH}>
           Contact
         </HeaderPageLink>
-      </div>
-    </header>
+      </Stack>
+    </AppBar>
   );
 };
 

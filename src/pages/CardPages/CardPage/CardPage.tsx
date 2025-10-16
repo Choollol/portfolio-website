@@ -1,22 +1,41 @@
 import { LinkCardInfo } from "@/utils/LinkCardUtils";
-import styles from "./CardPage.module.css";
-import pageStyles from "@/pages/Pages.module.css";
 import LinkCard from "@/components/LinkCard/LinkCard";
+import PageTitle from "@/pages/Common/PageTitle";
+import { createStyles } from "@/styles/Styling";
+import { Grid } from "@mui/material";
 
 interface Props {
   pageTitle: string;
   cards: LinkCardInfo[];
 }
 
+const styles = createStyles({
+  cardsContainer: {
+    margin: "40px 0px",
+    maxWidth: "80%",
+    justifyContent: "center",
+  },
+  cardGridItem: {
+    justifyContent: "center",
+    justifyItems: "center",
+    marign: 0,
+    padding: 0,
+  },
+});
+
 const CardPage = ({ pageTitle, cards }: Props) => {
   return (
     <>
-      <h1 className={pageStyles["page-title"]}>{pageTitle}</h1>
-      <div className={styles["cards-container"]}>
+      <PageTitle text={pageTitle} />
+      <Grid container rowSpacing={4} sx={styles.cardsContainer}>
         {cards.map((cardInfo, index) => {
-          return <LinkCard key={index} {...cardInfo} />;
+          return (
+            <Grid size={{ lg: 4, md: 6, sm: 12 }} sx={styles.cardGridItem}>
+              <LinkCard key={index} {...cardInfo} />
+            </Grid>
+          );
         })}
-      </div>
+      </Grid>
     </>
   );
 };

@@ -1,20 +1,34 @@
 import dayjs from "dayjs";
-import styles from "./Footer.module.css";
 import lastUpdatedDateData from "@/data/last-updated-date.json";
+import { createStyles } from "@/styles/Styling";
+import { BottomNavigation, Typography } from "@mui/material";
+
+const styles = createStyles({
+  footerContainer: {
+    display: "block",
+    backgroundColor: "hsla(0, 0%, 0%, 0)",
+    color: "inherit",
+    textAlign: "center",
+    fontSize: "80%",
+    paddingTop: "30px",
+    marginTop: "20px",
+    borderTop: "1px solid hsl(0, 0%, 50%)",
+  },
+});
 
 const Footer = () => {
   const date = dayjs(
     new Date(
       lastUpdatedDateData.year,
-      lastUpdatedDateData.month - 1, // -1 because months are 0-indexed
+      lastUpdatedDateData.month - 1 // -1 because months are 0-indexed
     )
   );
   const lastUpdatedDate: string = date.format("MMMM YYYY");
 
   return (
-    <footer className={styles["footer-container"]}>
-      Last updated: {lastUpdatedDate}
-    </footer>
+    <BottomNavigation sx={styles.footerContainer}>
+      <Typography>Last updated: {lastUpdatedDate}</Typography>
+    </BottomNavigation>
   );
 };
 

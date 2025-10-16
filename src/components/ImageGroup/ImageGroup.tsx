@@ -1,14 +1,22 @@
+import { createStyles } from "@/styles/Styling";
 import { ImageInfo, ImageSize } from "@/utils/ImageUtils";
-import styles from "./ImageGroup.module.css";
+import { Grid, Stack } from "@mui/material";
 
 interface Props {
   imageInfo: ImageInfo[];
 }
 
-const MAX_IMAGE_GROUP_WIDTH = 500;
+const MAX_IMAGE_GROUP_WIDTH = 400;
 const SMALL_IMAGE_WIDTH = 200;
 
 const IMAGE_SIZE_MULTIPLIER = 0.5;
+
+const styles = createStyles({
+  groupContainer: {
+    width: "100%",
+    maxWidth: MAX_IMAGE_GROUP_WIDTH,
+  },
+});
 
 const ImageGroup = ({ imageInfo }: Props) => {
   const imageCount = imageInfo.length;
@@ -17,40 +25,30 @@ const ImageGroup = ({ imageInfo }: Props) => {
     (MAX_IMAGE_GROUP_WIDTH / imageCount) * IMAGE_SIZE_MULTIPLIER;
   if (imageCount == 1) {
     if (imageInfo[0].imageSize == ImageSize.SMALL) {
-      imageMaxWidth = SMALL_IMAGE_WIDTH
+      imageMaxWidth = SMALL_IMAGE_WIDTH;
     }
   }
 
-  function getImageClassName(index: number): string {
-    let className = "";
-    if (imageCount > 1) {
-      className += index & 1 ? "align-right" : "align-left";
-    } else {
-      className += "single-image";
-    }
-    return styles[className];
-  }
+  const getImageContainerStyle = (index: number) => ({
+    alignSelf: index % 2 == 0 ? "flex-start" : "flex-end",
+  });
+
+  const imageStyle = {
+    maxWidth: imageMaxWidth,
+  };
 
   return (
-    <div
-      className={styles["image-group"]}
-      style={{
-        maxWidth: MAX_IMAGE_GROUP_WIDTH,
-      }}
-    >
-      {imageInfo.map(({ imagePath }, index) => {
-        return (
-          <img
-            key={index}
-            className={getImageClassName(index)}
-            src={imagePath}
-            style={{
-              maxWidth: imageMaxWidth,
-            }}
-          />
-        );
-      })}
-    </div>
+    <Grid container size={{ md: 4, sm: 12 }}>
+      <Stack sx={styles.groupContainer}>
+        {imageInfo.map(({ imagePath }, index) => {
+          return (
+            <Grid key={index} sx={getImageContainerStyle(index)}>
+              <img src={imagePath} style={imageStyle} />
+            </Grid>
+          );
+        })}
+      </Stack>
+    </Grid>
   );
 };
 

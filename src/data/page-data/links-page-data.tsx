@@ -1,40 +1,40 @@
-import { ReactNode } from "react";
-
 type LinksSectionData = {
   title: string;
-  text: ReactNode[];
+  text: {
+    label: string;
+    url: string;
+    doShowLink?: boolean;
+  }[];
 };
 
 export const linksData: LinksSectionData[] = [
   {
     title: "Profiles",
     text: [
-      <>
-        Itch.io:&nbsp;
-        <a href="https://choollol.itch.io/">https://choollol.itch.io/</a>
-      </>,
-
-      <>
-        GitHub:&nbsp;
-        <a href="https://github.com/Choollol/">https://github.com/Choollol/</a>
-      </>,
-
-      <>
-        Linkedin:&nbsp;
-        <a href="https://www.linkedin.com/in/christopher-sun1">
-          https://www.linkedin.com/in/christopher-sun1
-        </a>
-      </>,
+      {
+        label: "Itch.io",
+        url: "https://choollol.itch.io/",
+        doShowLink: true,
+      },
+      {
+        label: "GitHub",
+        url: "https://github.com/Choollol/",
+        doShowLink: true,
+      },
+      {
+        label: "LinkedIn",
+        url: "https://www.linkedin.com/in/christopher-sun1",
+        doShowLink: true,
+      },
     ],
   },
   {
     title: "Documentation",
     text: [
-      <>
-        <a href="https://docs.google.com/document/d/1JoiURcQxYknvDlhJPOnOCaJGMLsFv32iPlezUkGKPaY/edit?usp=sharing">
-          Unity Messenger System
-        </a>
-      </>,
+      {
+        label: "Unity Messenger System",
+        url: "https://docs.google.com/document/d/1JoiURcQxYknvDlhJPOnOCaJGMLsFv32iPlezUkGKPaY/edit?usp=sharing",
+      },
     ],
   },
 ];

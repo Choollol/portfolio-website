@@ -1,11 +1,18 @@
 import AlternatingParagraph from "@/components/AlternatingParagraph/AlternatingParagraph";
-//import styles from "./AlternatingSection.module.css";
-import pageStyles from "@/pages/Pages.module.css";
+import { createStyles } from "@/styles/Styling";
 import {
   alternateAlign,
   AlternatingParagraphAlign,
 } from "@/utils/AlternatingParagraphUtils";
 import { AlternatingSectionInfo } from "@/utils/AlternatingSectionUtils";
+import { Container, Typography } from "@mui/material";
+
+const styles = createStyles({
+  sectionTitle: {
+    textAlign: "center",
+    margin: "40px",
+  },
+});
 
 const AlternatingSection = ({
   startingAlign = AlternatingParagraphAlign.LEFT,
@@ -23,9 +30,11 @@ const AlternatingSection = ({
   }
 
   return (
-    <>
-      <h2 className={pageStyles["section-title"]}>{title}</h2>
-      <div className={pageStyles["page-content-container"]}>
+    <Container>
+      <Typography variant="h4" sx={styles.sectionTitle}>
+        {title}
+      </Typography>
+      <Container>
         {info.map((i) => {
           return (
             <AlternatingParagraph
@@ -35,8 +44,8 @@ const AlternatingSection = ({
             />
           );
         })}
-      </div>
-    </>
+      </Container>
+    </Container>
   );
 };
 

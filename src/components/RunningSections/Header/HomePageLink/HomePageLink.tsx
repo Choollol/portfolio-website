@@ -1,13 +1,23 @@
-import styles from "./HomePageLink.module.css";
+import { createStyles } from "@/styles/Styling";
 import { HOME_PAGE_PATH } from "@/utils/PageUtils";
-import { Link } from "react-router";
+import { Link, Typography } from "@mui/material";
+import { Link as RouterLink } from "react-router";
+
+const styles = createStyles({
+  text: {
+    fontWeight: 600,
+    fontSize: "1.5em",
+  },
+});
 
 const HomePageLink = () => {
   return (
-    <div>
-      <Link to={HOME_PAGE_PATH} className={styles["home-button"]}>Home</Link>
-    </div>
-  )
-}
+    <Link component={RouterLink} to={HOME_PAGE_PATH}>
+      <Typography variant="body1" sx={styles.text}>
+        Home
+      </Typography>
+    </Link>
+  );
+};
 
-export default HomePageLink
+export default HomePageLink;

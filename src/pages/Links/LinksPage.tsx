@@ -1,25 +1,44 @@
 import { linksData } from "@/data/page-data/links-page-data";
-import pageStyles from "@/pages/Pages.module.css";
-import styles from "./LinksPage.module.css";
+import PageTitle from "@/pages/Common/PageTitle";
+import PageContentContainer from "@/pages/Common/PageContainer";
+import SectionTitle from "@/pages/Common/SectionTitle";
+import { createStyles } from "@/styles/Styling";
+import { Link, Typography } from "@mui/material";
+
+const styles = createStyles({
+  text: {
+    fontSize: "1.2em",
+    textAlign: "center",
+    margin: "40px 0px",
+    "& .MuiLink-root": {
+      textDecoration: "underline",
+    },
+  },
+});
 
 const LinksPage = () => {
   return (
     <>
-      <h1 className={pageStyles["page-title"]}>Links</h1>
+      <PageTitle text="Links" />
       {linksData.map((linksSectionData, index) => {
         return (
-          <div key={index} className={pageStyles["page-content-container"]}>
-            <h3 className={pageStyles["section-title"]}>
-              {linksSectionData.title}
-            </h3>
+          <PageContentContainer key={index}>
+            <SectionTitle text={linksSectionData.title} />
             {linksSectionData.text.map((text, index) => {
               return (
-                <p className={styles["text"]} key={index}>
-                  {text}
-                </p>
+                <Typography variant="body1" sx={styles.text} key={index}>
+                  {text.doShowLink ? (
+                    <>
+                      {text.label}:&nbsp;
+                      <Link href={text.url}>{text.url}</Link>
+                    </>
+                  ) : (
+                    <Link href={text.url}>{text.label}</Link>
+                  )}
+                </Typography>
               );
             })}
-          </div>
+          </PageContentContainer>
         );
       })}
     </>
