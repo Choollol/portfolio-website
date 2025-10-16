@@ -23,6 +23,15 @@ export const defaultStyle: CSSProperties = {
 
 export const theme = createTheme({
   components: {
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          "& .MuiLink-root": {
+            textDecoration: "underline"
+          }
+        }
+      }
+    },
     MuiLink: {
       styleOverrides: {
         root: {
@@ -73,6 +82,6 @@ export const theme = createTheme({
     },
     body1: {
       lineHeight: "130%"
-    }
+    },
   },
 });

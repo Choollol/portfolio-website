@@ -10,9 +10,6 @@ const styles = createStyles({
     fontSize: "1.2em",
     textAlign: "center",
     margin: "40px 0px",
-    "& .MuiLink-root": {
-      textDecoration: "underline",
-    },
   },
 });
 
