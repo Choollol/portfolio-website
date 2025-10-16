@@ -7,6 +7,7 @@ const styles = createStyles({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    height: "100%",
     "&.MuiContainer-root": {
       margin: 0,
       padding: 0,
@@ -17,7 +18,7 @@ const styles = createStyles({
     flexDirection: "column",
     alignItems: "center",
     maxWidth: "300px",
-    minHeight: "360px",
+    height: "100%",
     padding: "20px 20px",
     border: "1px solid white",
     borderRadius: "5px",

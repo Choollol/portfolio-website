@@ -27,10 +27,18 @@ const CardPage = ({ pageTitle, cards }: Props) => {
   return (
     <>
       <PageTitle text={pageTitle} />
-      <Grid container rowSpacing={4} sx={styles.cardsContainer}>
+      <Grid
+        container
+        columnSpacing={1}
+        rowSpacing={4}
+        sx={styles.cardsContainer}
+      >
         {cards.map((cardInfo, index) => {
           return (
-            <Grid size={{ lg: 4, md: 6, sm: 12 }} sx={styles.cardGridItem}>
+            <Grid
+              size={{ sm: 12, md: 6, lg: 4, xl: 3 }}
+              sx={styles.cardGridItem}
+            >
               <LinkCard key={index} {...cardInfo} />
             </Grid>
           );
