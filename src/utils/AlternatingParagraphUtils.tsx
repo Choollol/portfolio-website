@@ -27,7 +27,7 @@ export function getPlaceholderAlternatingParagraphInfo(
   imageCount: number = 1,
   isLarge: boolean = false
 ): AlternatingParagraphInfo {
-  let imageInfo = [];
+  const imageInfo = [];
   for (let i = 0; i < imageCount; ++i) {
     imageInfo.push({
       imagePath: isLarge ? largePlaceholderImage : placeholderImage,
@@ -40,7 +40,7 @@ export function getPlaceholderAlternatingParagraphInfo(
 }
 
 export function getPlaceholderAlternatingSectionInfo(sectionCount: number) {
-  let info = [];
+  const info = [];
   for (let i = 0; i < sectionCount; ++i) {
     info.push(getPlaceholderAlternatingParagraphInfo(i + 1, i == 0));
   }
