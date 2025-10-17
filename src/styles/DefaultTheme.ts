@@ -51,6 +51,9 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           color: "inherit"
+        },
+        asterisk: {
+          color: "red"
         }
       }
     },
