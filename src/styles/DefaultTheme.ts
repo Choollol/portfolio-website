@@ -27,7 +27,11 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           "& .MuiLink-root": {
-            textDecoration: "underline"
+            color: "lightcyan",
+            textDecoration: "underline",
+            "&:hover": {
+              color: "lightblue",
+            },
           }
         }
       }
