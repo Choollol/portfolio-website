@@ -61,6 +61,17 @@ export const theme = createTheme({
         }
       }
     },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          color: "white",
+          transition: "background-color 0.2s",
+          "&:hover": {
+            backgroundColor: "hsla(0, 0%, 100%, 0.06)",
+          },
+        }
+      }
+    }
   },
   typography: {
     fontFamily: [

@@ -16,10 +16,11 @@ const styles = createStyles({
     justifyItems: "center",
     margin: "50px 50px",
     marginBottom: "100px",
+    width: "100%",
   },
   contactForm: {
     justifyContent: "center",
-    maxWidth: "80%",
+    width: "60%",
   },
   formLabel: {
     fontSize: "1.5em",
@@ -57,12 +58,10 @@ const styles = createStyles({
   submitButton: {
     padding: "6px 20px",
     margin: "20px 0px",
-    fontSize: "1.5em",
-    color: "white",
+    fontSize: "1.2em",
     border: "2px solid hsla(0, 0%, 0%, 0.8)",
     borderRadius: "4px",
     boxShadow: "2px 2px 5px hsl(0, 0%, 10%)",
-    transition: "background-color 0.2s",
   },
   submitSuccessText: {
     textAlign: "center",
@@ -173,7 +172,7 @@ export const ContactForm = () => {
           />,
           true
         )}
-        <Grid size={12} sx={styles.submitButtonContainer}>
+        <Grid sx={styles.submitButtonContainer}>
           <Button
             type="submit"
             style={styles.submitButton}
@@ -184,12 +183,12 @@ export const ContactForm = () => {
         </Grid>
       </Grid>
 
-      {actionState === FormState.SUBMIT_ERROR && (
+      {!isPending && actionState === FormState.SUBMIT_ERROR && (
         <Typography variant="body1" sx={styles.submitErrorText}>
           An error occured while trying to submit the form.
         </Typography>
       )}
-      {actionState === FormState.SUBMIT_SUCCESS && (
+      {!isPending && actionState === FormState.SUBMIT_SUCCESS && (
         <Typography variant="body1" sx={styles.submitSuccessText}>
           Message sent!
         </Typography>
