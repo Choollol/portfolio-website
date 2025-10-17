@@ -9,6 +9,9 @@ const styles = createStyles({
     margin: "20px",
   },
   websiteTitleContainer: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
     textAlign: "center",
     marginBottom: "100px",
   },
@@ -20,12 +23,12 @@ const styles = createStyles({
 const HomePage = () => {
   return (
     <Container sx={styles.homePageContainer}>
-      <Box sx={styles.websiteTitleContainer}>
+      <Container sx={styles.websiteTitleContainer}>
         <Typography variant="h2">Christopher Sun</Typography>
         <Typography variant="h4" sx={styles.websiteSubheading}>
           Portfolio Website
         </Typography>
-      </Box>
+      </Container>
 
       <Box>
         <AlternatingSection {...homePageData.introductionData} />

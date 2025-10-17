@@ -1,4 +1,4 @@
-import { createTheme, CSSProperties } from "@mui/material";
+import { createTheme, CSSProperties, responsiveFontSizes } from "@mui/material";
 
 declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
@@ -21,7 +21,7 @@ export const defaultStyle: CSSProperties = {
   },
 }
 
-export const theme = createTheme({
+let theme = createTheme({
   components: {
     MuiTypography: {
       styleOverrides: {
@@ -99,7 +99,11 @@ export const theme = createTheme({
       ...headerCommonStyles
     },
     body1: {
-      lineHeight: "130%"
+      lineHeight: 1.3
     },
   },
 });
+
+theme = responsiveFontSizes(theme);
+
+export { theme };
