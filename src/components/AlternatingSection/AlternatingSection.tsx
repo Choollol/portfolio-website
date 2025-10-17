@@ -9,6 +9,9 @@ import { Container, Typography } from "@mui/material";
 
 const styles = createStyles({
   sectionTitle: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
     textAlign: "center",
     margin: "40px",
   },
