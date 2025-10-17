@@ -1,7 +1,6 @@
 import { ImageInfo } from "@/utils/ImageUtils";
 import placeholderImage from "@/assets/images/placeholder.png";
 import largePlaceholderImage from "@/assets/images/placeholder_large.png";
-import { ReactNode } from "react";
 
 export enum AlternatingParagraphAlign {
   LEFT,
@@ -9,7 +8,7 @@ export enum AlternatingParagraphAlign {
 }
 
 export type AlternatingParagraphInfo = {
-  text: ReactNode;
+  text: string;
   imageInfo: ImageInfo[];
 };
 

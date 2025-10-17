@@ -1,11 +1,10 @@
 import ImageGroup from "@/components/ImageGroup/ImageGroup";
 import { AlternatingParagraphAlign } from "@/utils/AlternatingParagraphUtils";
 import { ImageInfo } from "@/utils/ImageUtils";
-import { ReactNode } from "react";
 import { Grid, Typography } from "@mui/material";
 
 interface Props {
-  text: ReactNode;
+  text: string;
   imageInfo: ImageInfo[];
   align: AlternatingParagraphAlign;
 }
