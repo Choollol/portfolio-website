@@ -59,17 +59,10 @@ const styles = createStyles({
     margin: "20px 0px",
     fontSize: "1.5em",
     color: "white",
-    backgroundColor:
-      "color-mix(in hsl, var(--site-background-color), white 5%)",
-    border:
-      "2px solid color-mix(in hsl, var(--site-background-color), black 80%)",
+    border: "2px solid hsla(0, 0%, 0%, 0.8)",
     borderRadius: "4px",
     boxShadow: "2px 2px 5px hsl(0, 0%, 10%)",
     transition: "background-color 0.2s",
-    "&:hover": {
-      backgroundColor:
-        "color-mix(in hsl, var(--site-background-color), white 14%)",
-    },
   },
   submitSuccessText: {
     textAlign: "center",

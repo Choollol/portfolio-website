@@ -23,13 +23,8 @@ const styles = createStyles({
     border: "1px solid white",
     borderRadius: "5px",
     boxShadow: "2px 5px 5px hsl(0, 0%, 0%, 20%)",
-    backgroundColor:
-      "color-mix(in hsl, var(--site-background-color), black 10%)",
+    backgroundColor: "hsla(0, 0%, 0%, 0.1)",
     transition: "background-color 0.2s",
-    "&::hover": {
-      backgroundColor:
-        "color-mix(in hsl, var(--site-background-color), black 4%)",
-    },
   },
   cardTitle: {
     marginBottom: "20px",

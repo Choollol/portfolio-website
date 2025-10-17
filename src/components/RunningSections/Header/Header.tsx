@@ -16,8 +16,7 @@ const styles = createStyles({
     justifyContent: "space-between",
     alignItems: "center",
     padding: "20px 40px",
-    backgroundColor:
-      "color-mix(in hsl, var(--site-background-color), black 8%)",
+    backgroundColor: "hsla(0, 0%, 0%, 0.08)",
     borderBottom: "1px solid hsl(0, 0%, 86%)",
   },
 });
