@@ -6,8 +6,11 @@ import {
 } from "@/utils/PageUtils";
 import HeaderPageLink from "./HeaderPageLink/HeaderPageLink";
 import HomePageLink from "./HomePageLink/HomePageLink";
-import { AppBar, Stack } from "@mui/material";
+import { AppBar, Stack, useMediaQuery, useTheme } from "@mui/material";
 import { createStyles } from "@/styles/Styling";
+import { useMemo } from "react";
+import BasicMenu from "@/components/common/BasicMenu";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const styles = createStyles({
   headerContainer: {
@@ -22,25 +25,41 @@ const styles = createStyles({
 });
 
 const Header = () => {
+  const theme = useTheme();
+
+  const isScreenSmall = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const headerPageLinks = useMemo(
+    () => [
+      <HeaderPageLink targetPagePath={GAMES_PAGE_PATH}>Games</HeaderPageLink>,
+      <HeaderPageLink targetPagePath={PROJECTS_PAGE_PATH}>
+        Projects
+      </HeaderPageLink>,
+      <HeaderPageLink targetPagePath={LINKS_PAGE_PATH}>Links</HeaderPageLink>,
+      <HeaderPageLink targetPagePath={CONTACT_PAGE_PATH}>
+        Contact
+      </HeaderPageLink>,
+    ],
+    []
+  );
+
+  const linkMenu = (
+    <BasicMenu buttonContent={<MenuIcon fontSize="large" />}>
+      {...headerPageLinks}
+    </BasicMenu>
+  );
+
+  const linkSpread = <Stack direction="row">{...headerPageLinks}</Stack>;
+
+  const otherPageLinks = isScreenSmall ? linkMenu : linkSpread;
+
   return (
     <AppBar position="static" sx={styles.headerContainer}>
       <Stack direction="row">
         <HomePageLink />
       </Stack>
 
-      <Stack direction="row">
-        <HeaderPageLink targetPagePath={GAMES_PAGE_PATH}>Games</HeaderPageLink>
-
-        <HeaderPageLink targetPagePath={PROJECTS_PAGE_PATH}>
-          Projects
-        </HeaderPageLink>
-
-        <HeaderPageLink targetPagePath={LINKS_PAGE_PATH}>Links</HeaderPageLink>
-
-        <HeaderPageLink targetPagePath={CONTACT_PAGE_PATH}>
-          Contact
-        </HeaderPageLink>
-      </Stack>
+      {otherPageLinks}
     </AppBar>
   );
 };
