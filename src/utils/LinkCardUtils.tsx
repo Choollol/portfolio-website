@@ -1,7 +1,5 @@
-import { ReactNode } from "react";
-
 export type LinkCardInfo = {
   title: string;
-  text: string | ReactNode;
+  text: string;
   targetUrl: string;
-}
+};

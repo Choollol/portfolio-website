@@ -1,22 +1,21 @@
 import placeholderImage from "@/assets/images/placeholder.png";
 import { ImageInfo } from "@/utils/ImageUtils";
-import { ReactNode } from "react";
 
 export const HOME_PAGE_PATH: string = "/";
 export const GAMES_PAGE_PATH: string = "/games";
 export const PROJECTS_PAGE_PATH: string = "/projects";
 export const LINKS_PAGE_PATH: string = "/links";
-export const CONTACT_PAGE_PATH: string = "/contact"
+export const CONTACT_PAGE_PATH: string = "/contact";
 
 export type PageSummaryInfo = {
   imageInfo: ImageInfo;
   title: string;
-  text: string | ReactNode;
+  text: string;
   targetUrl: string;
 };
 
 export function getPlaceholderPageSummaries(summaryCount: number) {
-  let placeholders: PageSummaryInfo[] = [];
+  const placeholders: PageSummaryInfo[] = [];
   for (let i = 0; i < summaryCount; ++i) {
     placeholders.push({
       imageInfo: { imagePath: placeholderImage },
