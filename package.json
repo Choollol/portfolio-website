@@ -15,6 +15,7 @@
     "@emailjs/browser": "^4.4.1",
     "code-tag": "^1.2.0",
     "dayjs": "^1.11.13",
+    "mui-markdown": "^2.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router": "^7.1.5"

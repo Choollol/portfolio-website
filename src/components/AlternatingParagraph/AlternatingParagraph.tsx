@@ -1,7 +1,8 @@
+import MarkdownText from "@/components/common/MarkdownText";
 import ImageGroup from "@/components/ImageGroup/ImageGroup";
 import { AlternatingParagraphAlign } from "@/utils/AlternatingParagraphUtils";
 import { ImageInfo } from "@/utils/ImageUtils";
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 
 interface Props {
   text: string;
@@ -16,7 +17,7 @@ const AlternatingParagraph = ({ text, align, imageInfo }: Props) => {
     <Grid container spacing={10}>
       {align === AlternatingParagraphAlign.RIGHT && imageGroup}
       <Grid size={{ md: 8, sm: 12 }}>
-        <Typography variant="body1">{text}</Typography>
+        <MarkdownText>{text}</MarkdownText>
       </Grid>
       {align === AlternatingParagraphAlign.LEFT && imageGroup}
     </Grid>
