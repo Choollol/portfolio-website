@@ -3,6 +3,7 @@ import LinkCard from "@/components/LinkCard/LinkCard";
 import PageTitle from "@/pages/Common/PageTitle";
 import { createStyles } from "@/styles/styling";
 import { Grid } from "@mui/material";
+import PageBody from "@/pages/Common/PageBody";
 
 interface Props {
   pageTitle: string;
@@ -12,7 +13,6 @@ interface Props {
 const styles = createStyles({
   cardsContainer: {
     margin: "40px 0px",
-    maxWidth: "80%",
     justifyContent: "center",
   },
   cardGridItem: {
@@ -25,7 +25,7 @@ const styles = createStyles({
 
 const CardPage = ({ pageTitle, cards }: Props) => {
   return (
-    <>
+    <PageBody normalMaxWidthPercent={80}>
       <PageTitle text={pageTitle} />
       <Grid
         container
@@ -44,7 +44,7 @@ const CardPage = ({ pageTitle, cards }: Props) => {
           );
         })}
       </Grid>
-    </>
+    </PageBody>
   );
 };
 
