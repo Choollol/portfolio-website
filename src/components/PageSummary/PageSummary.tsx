@@ -6,14 +6,10 @@ import { Box, Link, Stack, Typography } from "@mui/material";
 const styles = createStyles({
   summaryTitle: {
     textDecoration: "underline",
-    marginTop: "0px",
-    marginBottom: "10px",
-    padding: "0px",
   },
   contentContainer: {
     alignItems: "center",
     gap: "30px",
-    margin: "0px 0px",
     marginBottom: "50px",
     cursor: "pointer",
     maxWidth: "1000px",

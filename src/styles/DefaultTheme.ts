@@ -71,6 +71,13 @@ let theme = createTheme({
           },
         }
       }
+    },
+    MuiDivider: {
+      styleOverrides: {
+        root: {
+          borderColor: "hsla(0, 0%, 100%, 0.6)",
+        }
+      }
     }
   },
   typography: {
