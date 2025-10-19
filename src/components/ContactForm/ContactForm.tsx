@@ -1,6 +1,6 @@
 import { ReactElement, useActionState } from "react";
 import emailjs from "@emailjs/browser";
-import { createStyles } from "@/styles/Styling";
+import { createStyles } from "@/styles/styling";
 import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 
 enum FormState {

@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import lastUpdatedDateData from "@/data/last-updated-date.json";
-import { createStyles } from "@/styles/Styling";
+import { createStyles } from "@/styles/styling";
 import { BottomNavigation, Typography } from "@mui/material";
 
 const styles = createStyles({

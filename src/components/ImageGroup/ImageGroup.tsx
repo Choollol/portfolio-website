@@ -1,5 +1,5 @@
-import { createStyles } from "@/styles/Styling";
-import { ImageInfo, ImageSize } from "@/utils/ImageUtils";
+import { createStyles } from "@/styles/styling";
+import { ImageInfo, ImageSize } from "@/utils/imageUtils";
 import { Grid, Stack } from "@mui/material";
 
 interface Props {

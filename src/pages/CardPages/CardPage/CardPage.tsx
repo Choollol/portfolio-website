@@ -1,7 +1,7 @@
-import { LinkCardInfo } from "@/utils/LinkCardUtils";
+import { LinkCardInfo } from "@/utils/linkCardUtils";
 import LinkCard from "@/components/LinkCard/LinkCard";
 import PageTitle from "@/pages/Common/PageTitle";
-import { createStyles } from "@/styles/Styling";
+import { createStyles } from "@/styles/styling";
 import { Grid } from "@mui/material";
 
 interface Props {

@@ -3,11 +3,11 @@ import {
   GAMES_PAGE_PATH,
   LINKS_PAGE_PATH,
   PROJECTS_PAGE_PATH,
-} from "@/utils/PageUtils";
+} from "@/utils/pageUtils";
 import HeaderPageLink from "./HeaderPageLink/HeaderPageLink";
 import HomePageLink from "./HomePageLink/HomePageLink";
 import { AppBar, Stack, useMediaQuery, useTheme } from "@mui/material";
-import { createStyles } from "@/styles/Styling";
+import { createStyles } from "@/styles/styling";
 import { useMemo } from "react";
 import BasicMenu from "@/components/common/BasicMenu";
 import MenuIcon from "@mui/icons-material/Menu";

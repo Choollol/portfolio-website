@@ -1,7 +1,7 @@
 import MarkdownText from "@/components/common/MarkdownText";
 import ImageGroup from "@/components/ImageGroup/ImageGroup";
-import { AlternatingParagraphAlign } from "@/utils/AlternatingParagraphUtils";
-import { ImageInfo } from "@/utils/ImageUtils";
+import { AlternatingParagraphAlign } from "@/utils/alternatingParagraphUtils";
+import { ImageInfo } from "@/utils/imageUtils";
 import { Grid } from "@mui/material";
 
 interface Props {

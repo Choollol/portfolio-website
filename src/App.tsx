@@ -8,14 +8,14 @@ import {
   HOME_PAGE_PATH,
   LINKS_PAGE_PATH,
   PROJECTS_PAGE_PATH,
-} from "@/utils/PageUtils";
+} from "@/utils/pageUtils";
 import Footer from "@/components/RunningSections/Footer/Footer";
 import GamesOverviewPage from "@/pages/OverviewPages/GamesOverviewPage";
 import ProjectsPage from "@/pages/CardPages/Projects/ProjectsPage";
 import ContactPage from "@/pages/Contact/ContactPage";
 import { Box, GlobalStyles, ThemeProvider } from "@mui/material";
-import { defaultStyle, theme } from "@/styles/DefaultTheme";
-import { createStyles } from "@/styles/Styling";
+import { defaultStyle, theme } from "@/styles/defaultTheme";
+import { createStyles } from "@/styles/styling";
 
 const styles = createStyles({
   pageBody: {

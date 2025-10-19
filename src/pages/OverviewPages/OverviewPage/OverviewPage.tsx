@@ -1,5 +1,5 @@
 import PageSummary from "@/components/PageSummary/PageSummary";
-import { PageSummaryInfo } from "@/utils/PageUtils";
+import { PageSummaryInfo } from "@/utils/pageUtils";
 import PageContentContainer from "@/pages/Common/PageContainer";
 import PageTitle from "@/pages/Common/PageTitle";
 

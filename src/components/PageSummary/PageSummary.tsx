@@ -1,5 +1,5 @@
-import { createStyles } from "@/styles/Styling";
-import { PageSummaryInfo } from "@/utils/PageUtils";
+import { createStyles } from "@/styles/styling";
+import { PageSummaryInfo } from "@/utils/pageUtils";
 import { Box, Link, Stack, Typography } from "@mui/material";
 
 const styles = createStyles({

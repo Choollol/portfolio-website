@@ -1,7 +1,7 @@
 import { Link, Typography } from "@mui/material";
 import { ReactNode } from "react";
 import { Link as RouterLink } from "react-router";
-import { createStyles } from "@/styles/Styling";
+import { createStyles } from "@/styles/styling";
 
 interface Props {
   children: ReactNode;

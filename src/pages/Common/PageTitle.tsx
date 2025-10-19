@@ -1,4 +1,4 @@
-import { createStyles } from "@/styles/Styling";
+import { createStyles } from "@/styles/styling";
 import { Typography } from "@mui/material";
 
 interface Props {

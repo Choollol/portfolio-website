@@ -1,5 +1,5 @@
-import { createStyles } from "@/styles/Styling";
-import { HOME_PAGE_PATH } from "@/utils/PageUtils";
+import { createStyles } from "@/styles/styling";
+import { HOME_PAGE_PATH } from "@/utils/pageUtils";
 import { Link, Typography } from "@mui/material";
 import { Link as RouterLink } from "react-router";
 

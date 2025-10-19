@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { createStyles, StyleProps } from "@/styles/Styling";
+import { createStyles, StyleProps } from "@/styles/styling";
 import { Box } from "@mui/material";
 
 interface Props {

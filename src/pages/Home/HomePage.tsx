@@ -1,6 +1,6 @@
 import AlternatingSection from "@/components/AlternatingSection/AlternatingSection";
 import * as homePageData from "@/data/page-data/home-page-data";
-import { createStyles } from "@/styles/Styling";
+import { createStyles } from "@/styles/styling";
 import { Box, Container, Typography } from "@mui/material";
 
 const styles = createStyles({

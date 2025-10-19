@@ -1,10 +1,10 @@
 import AlternatingParagraph from "@/components/AlternatingParagraph/AlternatingParagraph";
-import { createStyles } from "@/styles/Styling";
+import { createStyles } from "@/styles/styling";
 import {
   alternateAlign,
   AlternatingParagraphAlign,
-} from "@/utils/AlternatingParagraphUtils";
-import { AlternatingSectionInfo } from "@/utils/AlternatingSectionUtils";
+} from "@/utils/alternatingParagraphUtils";
+import { AlternatingSectionInfo } from "@/utils/alternatingSectionUtils";
 import { Container, Typography } from "@mui/material";
 
 const styles = createStyles({

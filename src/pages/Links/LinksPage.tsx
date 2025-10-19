@@ -2,7 +2,7 @@ import { linksData } from "@/data/page-data/links-page-data";
 import PageTitle from "@/pages/Common/PageTitle";
 import PageContentContainer from "@/pages/Common/PageContainer";
 import SectionTitle from "@/pages/Common/SectionTitle";
-import { createStyles } from "@/styles/Styling";
+import { createStyles } from "@/styles/styling";
 import { Link, Typography } from "@mui/material";
 
 const styles = createStyles({
