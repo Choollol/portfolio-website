@@ -5,7 +5,7 @@ import {
   AlternatingParagraphAlign,
 } from "@/utils/alternatingParagraphUtils";
 import { AlternatingSectionInfo } from "@/utils/alternatingSectionUtils";
-import { Container, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 
 const styles = createStyles({
   sectionTitle: {
@@ -14,6 +14,9 @@ const styles = createStyles({
     alignItems: "center",
     textAlign: "center",
     margin: "40px",
+  },
+  paragraphContainer: {
+    marginBottom: "30px",
   },
 });
 
@@ -40,11 +43,9 @@ const AlternatingSection = ({
       <Container>
         {info.map((i) => {
           return (
-            <AlternatingParagraph
-              key={nextId++}
-              {...i}
-              align={getNextAlign()}
-            />
+            <Box key={nextId++} sx={styles.paragraphContainer}>
+              <AlternatingParagraph {...i} align={getNextAlign()} />
+            </Box>
           );
         })}
       </Container>
