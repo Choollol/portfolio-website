@@ -21,6 +21,7 @@ const styles = createStyles({
     maxWidth: "300px",
     height: "100%",
     padding: "20px 20px",
+    textAlign: "center",
     border: "1px solid white",
     borderRadius: "5px",
     boxShadow: "2px 5px 5px hsl(0, 0%, 0%, 20%)",
@@ -29,10 +30,6 @@ const styles = createStyles({
   },
   cardTitle: {
     marginBottom: "20px",
-  },
-  cardText: {
-    display: "inline-block",
-    textAlign: "center",
   },
 });
 
@@ -43,9 +40,7 @@ const LinkCard = ({ title, text, targetUrl }: LinkCardInfo) => {
         <Typography variant="h5" sx={styles.cardTitle}>
           {title}
         </Typography>
-        <Typography variant="body1" sx={styles.cardText}>
-          <MarkdownText>{text}</MarkdownText>
-        </Typography>
+        <MarkdownText>{text}</MarkdownText>
       </Link>
     </Container>
   );
