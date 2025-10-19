@@ -36,10 +36,11 @@ const CardPage = ({ pageTitle, cards }: Props) => {
         {cards.map((cardInfo, index) => {
           return (
             <Grid
+              key={index}
               size={{ sm: 12, md: 6, lg: 4, xl: 3 }}
               sx={styles.cardGridItem}
             >
-              <LinkCard key={index} {...cardInfo} />
+              <LinkCard {...cardInfo} />
             </Grid>
           );
         })}
