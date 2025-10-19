@@ -14,8 +14,10 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@mui/icons-material": "^7.3.4",
+    "@types/mui-image": "^1.0.5",
     "code-tag": "^1.2.0",
     "dayjs": "^1.11.13",
+    "mui-image": "^1.0.9",
     "mui-markdown": "^2.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

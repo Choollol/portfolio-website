@@ -78,7 +78,7 @@ let theme = createTheme({
           borderColor: "hsla(0, 0%, 100%, 0.6)",
         }
       }
-    }
+    },
   },
   typography: {
     fontFamily: [

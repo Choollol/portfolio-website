@@ -2,6 +2,7 @@ import useIsScreenSmall from "@/hooks/useIsScreenSmall";
 import { createStyles } from "@/styles/styling";
 import { PageSummaryInfo } from "@/utils/pageUtils";
 import { Box, Link, Stack, Typography } from "@mui/material";
+import Image from "@/components/common/Image";
 
 const styles = createStyles({
   summaryTitle: {
@@ -43,7 +44,7 @@ const PageSummary = ({
 
   const image =
     imageInfo.imagePath != "" ? (
-      <img style={styles.image} src={imageInfo.imagePath} />
+      <Image src={imageInfo.imagePath} sx={styles.image} />
     ) : (
       <Box sx={styles.noImageText}>
         <Typography variant="body1">No Image</Typography>

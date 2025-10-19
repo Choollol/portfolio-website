@@ -1,6 +1,7 @@
 import { createStyles } from "@/styles/styling";
 import { ImageInfo, ImageSize } from "@/utils/imageUtils";
 import { Grid, Stack } from "@mui/material";
+import Image from "@/components/common/Image";
 
 interface Props {
   imageInfo: ImageInfo[];
@@ -43,7 +44,7 @@ const ImageGroup = ({ imageInfo }: Props) => {
         {imageInfo.map(({ imagePath }, index) => {
           return (
             <Grid key={index} sx={getImageContainerStyle(index)}>
-              <img src={imagePath} style={imageStyle} />
+              <Image src={imagePath} sx={imageStyle} />
             </Grid>
           );
         })}
