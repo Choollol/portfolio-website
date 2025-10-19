@@ -1,5 +1,5 @@
 import useIsScreenSmall from "@/hooks/useIsScreenSmall";
-import { createStyles } from "@/styles/styling";
+import { createStyles, mergeStyles } from "@/styles/styling";
 import { PageSummaryInfo } from "@/utils/pageUtils";
 import { Box, Link, Stack, Typography } from "@mui/material";
 import Image from "@/components/common/Image";
@@ -16,13 +16,11 @@ const styles = createStyles({
     cursor: "pointer",
     maxWidth: "1000px",
   },
-  image: {
-    width: 200,
-    objectFit: "contain",
-  },
-  noImageText: {
-    maxWidth: "200px",
+  imageContainer: {
     minWidth: 200,
+    maxWidth: 200,
+  },
+  noImageTextContainer: {
     height: 200,
     border: "1px groove white",
     borderRadius: "5px",
@@ -45,9 +43,9 @@ const PageSummary = ({
 
   const image =
     imageInfo.imagePath != "" ? (
-      <Image src={imageInfo.imagePath} sx={styles.image} />
+      <Image src={imageInfo.imagePath} />
     ) : (
-      <Box sx={styles.noImageText}>
+      <Box sx={mergeStyles(styles.noImageTextContainer, styles.imageContainer)}>
         <Typography variant="body1">No Image</Typography>
       </Box>
     );
@@ -61,7 +59,7 @@ const PageSummary = ({
         direction={isScreenSmall ? "column" : "row"}
         sx={styles.contentContainer}
       >
-        {image}
+        <Box sx={styles.imageContainer}>{image}</Box>
         <Typography variant="body1">{text}</Typography>
       </Stack>
     </Link>
