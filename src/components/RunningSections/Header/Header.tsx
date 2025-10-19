@@ -6,11 +6,12 @@ import {
 } from "@/utils/pageUtils";
 import HeaderPageLink from "./HeaderPageLink/HeaderPageLink";
 import HomePageLink from "./HomePageLink/HomePageLink";
-import { AppBar, Stack, useMediaQuery, useTheme } from "@mui/material";
+import { AppBar, Stack } from "@mui/material";
 import { createStyles } from "@/styles/styling";
 import { useMemo } from "react";
 import BasicMenu from "@/components/common/BasicMenu";
 import MenuIcon from "@mui/icons-material/Menu";
+import useIsScreenSmall from "@/hooks/useIsScreenSmall";
 
 const styles = createStyles({
   headerContainer: {
@@ -25,9 +26,7 @@ const styles = createStyles({
 });
 
 const Header = () => {
-  const theme = useTheme();
-
-  const isScreenSmall = useMediaQuery(theme.breakpoints.down("sm"));
+  const isScreenSmall = useIsScreenSmall();
 
   const headerPageLinks = useMemo(
     () => [
