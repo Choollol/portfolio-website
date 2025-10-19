@@ -7,6 +7,7 @@ import Image from "@/components/common/Image";
 const styles = createStyles({
   summaryTitle: {
     textDecoration: "underline",
+    marginBottom: "20px",
   },
   contentContainer: {
     alignItems: "center",
@@ -20,7 +21,7 @@ const styles = createStyles({
     objectFit: "contain",
   },
   noImageText: {
-    width: 200,
+    maxWidth: "200px",
     minWidth: 200,
     height: 200,
     border: "1px groove white",
