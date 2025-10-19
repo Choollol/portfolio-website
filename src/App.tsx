@@ -1,7 +1,7 @@
-import HomePage from "@/pages/Home/HomePage";
+import HomePage from "@/components/pages/HomePage";
 import { Route, Routes } from "react-router";
-import Header from "@/components/RunningSections/Header/Header";
-import LinksPage from "@/pages/Links/LinksPage";
+import Header from "@/components/running-sections/Header";
+import LinksPage from "@/components/pages/LinksPage";
 import {
   CONTACT_PAGE_PATH,
   GAMES_PAGE_PATH,
@@ -9,10 +9,10 @@ import {
   LINKS_PAGE_PATH,
   PROJECTS_PAGE_PATH,
 } from "@/utils/pageUtils";
-import Footer from "@/components/RunningSections/Footer/Footer";
-import GamesOverviewPage from "@/pages/OverviewPages/GamesOverviewPage";
-import ProjectsPage from "@/pages/CardPages/Projects/ProjectsPage";
-import ContactPage from "@/pages/Contact/ContactPage";
+import Footer from "@/components/running-sections/Footer";
+import GamesOverviewPage from "@/components/pages/GamesOverviewPage";
+import ProjectsPage from "@/components/pages/card-pages/ProjectsPage";
+import ContactPage from "@/components/pages/ContactPage";
 import { Box, GlobalStyles, ThemeProvider } from "@mui/material";
 import { defaultStyle, theme } from "@/styles/defaultTheme";
 import { createStyles } from "@/styles/styling";
