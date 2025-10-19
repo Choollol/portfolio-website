@@ -1,3 +1,4 @@
+import useIsScreenSmall from "@/hooks/useIsScreenSmall";
 import { createStyles } from "@/styles/styling";
 import { PageSummaryInfo } from "@/utils/pageUtils";
 import { Box, Link, Stack, Typography } from "@mui/material";
@@ -42,6 +43,8 @@ const PageSummary = ({
   text,
   targetUrl,
 }: PageSummaryInfo) => {
+  const isScreenSmall = useIsScreenSmall();
+
   const image =
     imageInfo.imagePath != "" ? (
       <img style={styles.image} src={imageInfo.imagePath} />
@@ -50,12 +53,16 @@ const PageSummary = ({
         <Typography variant="body1">No Image</Typography>
       </Box>
     );
+
   return (
     <Link href={targetUrl}>
       <Typography variant="h6" sx={styles.summaryTitle}>
         {title}
       </Typography>
-      <Stack direction="row" sx={styles.contentContainer}>
+      <Stack
+        direction={isScreenSmall ? "column" : "row"}
+        sx={styles.contentContainer}
+      >
         {image}
         <Typography variant="body1">{text}</Typography>
       </Stack>
