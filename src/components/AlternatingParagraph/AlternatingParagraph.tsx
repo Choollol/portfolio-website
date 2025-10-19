@@ -19,7 +19,7 @@ const AlternatingParagraph = ({ text, align, imageInfo }: Props) => {
   );
 
   return (
-    <Grid container spacing={10}>
+    <Grid container rowSpacing={6} columnSpacing={10}>
       {align === AlternatingParagraphAlign.RIGHT && imageGroup}
       <Grid size={{ md: 8, sm: 12 }}>
         <MarkdownText>{text}</MarkdownText>

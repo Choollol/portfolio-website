@@ -16,6 +16,7 @@ const styles = createStyles({
   groupContainer: {
     width: "100%",
     maxWidth: MAX_IMAGE_GROUP_WIDTH,
+    justifyContent: "space-between",
   },
 });
 
