@@ -1,13 +1,10 @@
 import AlternatingSection from "@/components/AlternatingSection/AlternatingSection";
 import * as homePageData from "@/data/page-data/home-page-data";
+import PageBody from "@/pages/Common/PageBody";
 import { createStyles } from "@/styles/styling";
 import { Box, Container, Typography } from "@mui/material";
 
 const styles = createStyles({
-  homePageContainer: {
-    maxWidth: "70%",
-    margin: "20px",
-  },
   websiteTitleContainer: {
     display: "flex",
     flexDirection: "column",
@@ -22,7 +19,7 @@ const styles = createStyles({
 
 const HomePage = () => {
   return (
-    <Container sx={styles.homePageContainer}>
+    <PageBody>
       <Container sx={styles.websiteTitleContainer}>
         <Typography variant="h2">Christopher Sun</Typography>
         <Typography variant="h4" sx={styles.websiteSubheading}>
@@ -34,7 +31,7 @@ const HomePage = () => {
         <AlternatingSection {...homePageData.introductionData} />
         <AlternatingSection {...homePageData.currentProjectsData} />
       </Box>
-    </Container>
+    </PageBody>
   );
 };
 
