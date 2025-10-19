@@ -1,6 +1,7 @@
 import { LinkCardInfo } from "@/utils/linkCardUtils";
 import { Container, Link, Typography } from "@mui/material";
 import { createStyles } from "@/styles/styling";
+import MarkdownText from "@/components/common/MarkdownText";
 
 const styles = createStyles({
   cardContainer: {
@@ -43,7 +44,7 @@ const LinkCard = ({ title, text, targetUrl }: LinkCardInfo) => {
           {title}
         </Typography>
         <Typography variant="body1" sx={styles.cardText}>
-          {text}
+          <MarkdownText>{text}</MarkdownText>
         </Typography>
       </Link>
     </Container>

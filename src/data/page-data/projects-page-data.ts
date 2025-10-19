@@ -25,7 +25,7 @@ export const projectCards: LinkCardInfo[] = [
   {
     title: "Lox Interpreters",
     text: html`
-      Following along Robert Nystrom's book <i>Crafting Interpreters</i>, I
+      Following along Robert Nystrom's book *Crafting Interpreters*, I
       coded two interpreters for a language called Lox. CPPLox, coded in C++, is
       a tree-walk interpreter and is simpler but slower. CLox, coded in C, is a
       bytecode virtual machine and is more complex but much faster.
