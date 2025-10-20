@@ -45,7 +45,7 @@ const PageSummary = ({
   const image = useMemo(
     () =>
       imageInfo.imagePath != "" ? (
-        <Image src={imageInfo.imagePath} />
+        <Image src={imageInfo.imagePath} disableAntialiasing />
       ) : (
         <Box
           sx={mergeStyles(styles.noImageTextContainer, styles.imageContainer)}
