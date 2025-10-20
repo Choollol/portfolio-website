@@ -4,6 +4,7 @@ import PageTitle from "@/components/PageTitle";
 import { createStyles } from "@/styles/styling";
 import { Grid } from "@mui/material";
 import PageBody from "@/components/PageBody";
+import useIsScreenSmall from "@/hooks/useIsScreenSmall";
 
 interface Props {
   pageTitle: string;
@@ -15,17 +16,18 @@ const styles = createStyles({
     margin: "40px 0px",
     justifyContent: "center",
   },
-  cardGridItem: {
+  cardGridItem: (isScreenSmall: boolean) => ({
     justifyContent: "center",
     justifyItems: "center",
-    marign: 0,
-    padding: 0,
-  },
+    aspectRatio: isScreenSmall ? "auto" : "4/5",
+  }),
 });
 
 const CardPage = ({ pageTitle, cards }: Props) => {
+  const isScreenSmall = useIsScreenSmall();
+
   return (
-    <PageBody normalMaxWidthPercent={80}>
+    <PageBody>
       <PageTitle text={pageTitle} />
       <Grid
         container
@@ -35,11 +37,7 @@ const CardPage = ({ pageTitle, cards }: Props) => {
       >
         {cards.map((cardInfo, index) => {
           return (
-            <Grid
-              key={index}
-              size={{ sm: 12, md: 6, lg: 4, xl: 3 }}
-              sx={styles.cardGridItem}
-            >
+            <Grid key={index} sx={styles.cardGridItem(isScreenSmall)}>
               <LinkCard {...cardInfo} />
             </Grid>
           );
