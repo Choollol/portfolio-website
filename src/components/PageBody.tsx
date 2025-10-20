@@ -1,4 +1,4 @@
-import useIsScreenSmall from "@/hooks/useIsScreenSmall";
+import useIsScreenTiny from "@/hooks/useIsScreenTiny";
 import { createStyles, mergeStyles } from "@/styles/styling";
 import { Box } from "@mui/material";
 import { ReactNode } from "react";
@@ -19,10 +19,10 @@ const styles = createStyles({
 });
 
 const PageBody = ({ children, normalMaxWidthPercent = 70 }: Props) => {
-  const isScreenSmall = useIsScreenSmall();
+  const isScreenTiny = useIsScreenTiny();
 
   const containerStyles = mergeStyles(styles.container, {
-    width: isScreenSmall ? "90%" : `${normalMaxWidthPercent}%`,
+    width: isScreenTiny ? "90%" : `${normalMaxWidthPercent}%`,
   });
 
   return <Box sx={containerStyles}>{children}</Box>;

@@ -1,4 +1,4 @@
-import useIsScreenSmall from "@/hooks/useIsScreenSmall";
+import useIsScreenTiny from "@/hooks/useIsScreenTiny";
 import { createStyles, mergeStyles } from "@/styles/styling";
 import { PageSummaryInfo } from "@/utils/pageUtils";
 import { Box, Link, Stack, Typography } from "@mui/material";
@@ -40,7 +40,7 @@ const PageSummary = ({
   text,
   targetUrl,
 }: PageSummaryInfo) => {
-  const isScreenSmall = useIsScreenSmall();
+  const isScreenTiny = useIsScreenTiny();
 
   const image = useMemo(
     () =>
@@ -63,7 +63,7 @@ const PageSummary = ({
         {title}
       </Typography>
       <Stack
-        direction={isScreenSmall ? "column" : "row"}
+        direction={isScreenTiny ? "column" : "row"}
         sx={styles.contentContainer}
       >
         <Box sx={styles.imageContainer}>{image}</Box>

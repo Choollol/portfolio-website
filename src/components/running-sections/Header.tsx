@@ -11,7 +11,7 @@ import { createStyles } from "@/styles/styling";
 import { useMemo } from "react";
 import BasicMenu from "@/components/BasicMenu";
 import MenuIcon from "@mui/icons-material/Menu";
-import useIsScreenSmall from "@/hooks/useIsScreenSmall";
+import useIsScreenTiny from "@/hooks/useIsScreenTiny";
 
 const styles = createStyles({
   headerContainer: {
@@ -29,7 +29,7 @@ const styles = createStyles({
 });
 
 const Header = () => {
-  const isScreenSmall = useIsScreenSmall();
+  const isScreenTiny = useIsScreenTiny();
 
   const headerPageLinks = useMemo(
     () => [
@@ -56,7 +56,7 @@ const Header = () => {
 
   const linkSpread = <Stack direction="row">{...headerPageLinks}</Stack>;
 
-  const otherPageLinks = isScreenSmall ? linkMenu : linkSpread;
+  const otherPageLinks = isScreenTiny ? linkMenu : linkSpread;
 
   return (
     <AppBar position="static" sx={styles.headerContainer}>
