@@ -1,17 +1,7 @@
+import { GAME_THUMBNAILS_PATH } from "@/utils/imageUtils";
 import { PageSummaryInfo } from "@/utils/pageUtils";
-import slimeThumbnail from "@/assets/game_thumbnails/Slime_Thumbnail.png";
-import higherThumbnail from "@/assets/game_thumbnails/Higher_Thumbnail.png";
-import espaceThumbnail from "@/assets/game_thumbnails/Espace_Thumbnail.png";
-import dreamsThumbnail from "@/assets/game_thumbnails/Dreams_Thumbnail.png";
-import pluckiThumbnail from "@/assets/game_thumbnails/Plucki_Thumbnail.png";
-import sonicThumbnail from "@/assets/game_thumbnails/Sonic_Thumbnail.png";
-import hunterThumbnail from "@/assets/game_thumbnails/Hunter_Thumbnail.png";
-import untableThumbnail from "@/assets/game_thumbnails/Untable_Thumbnail.png";
-import leftBehindThumbnail from "@/assets/game_thumbnails/Left_Behind_Thumbnail.png";
-import ghostlyReflectionThumbnail from "@/assets/game_thumbnails/Ghostly_Reflection_Thumbnail.png";
-import hedgehogThumbnail from "@/assets/game_thumbnails/Hedgehog_Thumbnail.png";
-import towhereThumbnail from "@/assets/game_thumbnails/Towhere_Thumbnail.png";
 import { html } from "code-tag";
+
 
 function getGameUrl(path: string) {
   return `https://choollol.itch.io/${path}`;
@@ -19,7 +9,7 @@ function getGameUrl(path: string) {
 
 export const gamesSummaryData: PageSummaryInfo[] = [
   {
-    imageInfo: { imagePath: towhereThumbnail },
+    imageInfo: { imagePath: `${GAME_THUMBNAILS_PATH}/Towhere_Thumbnail.png` },
     title: "To Where We Were",
     text: html`
       "To Where We Were" is a walking simulator about being brought to the
@@ -30,7 +20,7 @@ export const gamesSummaryData: PageSummaryInfo[] = [
     targetUrl: getGameUrl("to-where-we-were"),
   },
   {
-    imageInfo: { imagePath: hedgehogThumbnail },
+    imageInfo: { imagePath: `${GAME_THUMBNAILS_PATH}/Hedgehog_Thumbnail.png` },
     title: "Hedgehog's Dilemma",
     text: html`
       I worked on this game along with four other developers as a submission to
@@ -41,7 +31,7 @@ export const gamesSummaryData: PageSummaryInfo[] = [
     targetUrl: "https://ctnp.itch.io/hedgehogs-dilemma",
   },
   {
-    imageInfo: { imagePath: ghostlyReflectionThumbnail },
+    imageInfo: { imagePath: `${GAME_THUMBNAILS_PATH}/Ghostly_Reflection_Thumbnail.png` },
     title: "A Ghostly Reflection",
     text: html`
       This game, a puzzle-platformer, was my submission to "Fall 2024 VGDC
@@ -53,7 +43,7 @@ export const gamesSummaryData: PageSummaryInfo[] = [
     targetUrl: getGameUrl("a-ghostly-reflection"),
   },
   {
-    imageInfo: { imagePath: leftBehindThumbnail },
+    imageInfo: { imagePath: `${GAME_THUMBNAILS_PATH}/Left_Behind_Thumbnail.png` },
     title: "Left Behind",
     text: html`
       After taking a break from game development, I decided to return to it and
@@ -65,7 +55,7 @@ export const gamesSummaryData: PageSummaryInfo[] = [
     targetUrl: getGameUrl("left-behind"),
   },
   {
-    imageInfo: { imagePath: untableThumbnail },
+    imageInfo: { imagePath: `${GAME_THUMBNAILS_PATH}/Untable_Thumbnail.png` },
     title: "Untable",
     text: html`
       This is a point-and-click puzzle game developed in three days for "Jam
@@ -77,7 +67,7 @@ export const gamesSummaryData: PageSummaryInfo[] = [
     targetUrl: getGameUrl("untable"),
   },
   {
-    imageInfo: { imagePath: hunterThumbnail },
+    imageInfo: { imagePath: `${GAME_THUMBNAILS_PATH}/Hunter_Thumbnail.png` },
     title: "Hunter",
     text: html`
       "Hunter" was also developed in two days. The game jam's theme was
@@ -88,7 +78,7 @@ export const gamesSummaryData: PageSummaryInfo[] = [
     targetUrl: getGameUrl("hunter"),
   },
   {
-    imageInfo: { imagePath: sonicThumbnail },
+    imageInfo: { imagePath: `${GAME_THUMBNAILS_PATH}/Sonic_Thumbnail.png` },
     title: "Sonic Boost",
     text: html`
       I developed this game in two days for "NSJS | Summer 2023 Jam #11", the
@@ -99,7 +89,7 @@ export const gamesSummaryData: PageSummaryInfo[] = [
     targetUrl: getGameUrl("sonic-boost"),
   },
   {
-    imageInfo: { imagePath: pluckiThumbnail },
+    imageInfo: { imagePath: `${GAME_THUMBNAILS_PATH}/Plucki_Thumbnail.png` },
     title: "Plucki's Golden Town",
     text: html`
       In this game, players deliver food and ingredients to and from a
@@ -111,7 +101,7 @@ export const gamesSummaryData: PageSummaryInfo[] = [
     targetUrl: getGameUrl("pluckis-golden-town"),
   },
   {
-    imageInfo: { imagePath: dreamsThumbnail },
+    imageInfo: { imagePath: `${GAME_THUMBNAILS_PATH}/Dreams_Thumbnail.png` },
     title: "Dreams of Life",
     text: html`
       "Dreams of Life" is a puzzle game consisting of four puzzles and a final
@@ -134,7 +124,7 @@ export const gamesSummaryData: PageSummaryInfo[] = [
     targetUrl: getGameUrl("the-blind-gladiator"),
   },
   {
-    imageInfo: { imagePath: espaceThumbnail },
+    imageInfo: { imagePath: `${GAME_THUMBNAILS_PATH}/Espace_Thumbnail.png` },
     title: "Espace",
     text: html`
       "Espace" was developed over the course of a month for a game jam called
@@ -145,7 +135,7 @@ export const gamesSummaryData: PageSummaryInfo[] = [
     targetUrl: getGameUrl("espace"),
   },
   {
-    imageInfo: { imagePath: higherThumbnail },
+    imageInfo: { imagePath: `${GAME_THUMBNAILS_PATH}/Higher_Thumbnail.png` },
     title: "Higher",
     text: html`
       "Higher" was the first game I made using Unity and C#, developed right
@@ -157,7 +147,7 @@ export const gamesSummaryData: PageSummaryInfo[] = [
     targetUrl: getGameUrl("higher"),
   },
   {
-    imageInfo: { imagePath: slimeThumbnail },
+    imageInfo: { imagePath: `${GAME_THUMBNAILS_PATH}/Slime_Thumbnail.png` },
     title: "Slime and Witch",
     text: html`
       This game has a top-down-style and was the first game I made, and I

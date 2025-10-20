@@ -12,3 +12,5 @@ export type ImageInfo = {
   imageSize?: ImageSize;
 }
 
+export const GAME_THUMBNAILS_PATH = "game_thumbnails";
+export const ICONS_PATH = "images/icons"

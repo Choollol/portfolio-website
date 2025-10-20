@@ -1,12 +1,6 @@
 import { AlternatingParagraphAlign } from "@/utils/alternatingParagraphUtils";
 import { AlternatingSectionInfo } from "@/utils/alternatingSectionUtils";
-import { ImageSize } from "@/utils/imageUtils";
-import cppLogo from "@/assets/images/icons/CPP_Logo.png";
-import reactLogo from "@/assets/images/icons/React_Logo.png";
-import unityLogo from "@/assets/images/icons/Unity_Logo.png";
-import csharpLogo from "@/assets/images/icons/CSharp_Logo.png";
-import minecraftLogo from "@/assets/images/icons/Minecraft_Logo.webp";
-import javaLogo from "@/assets/images/icons/Java_Logo.png";
+import { ICONS_PATH, ImageSize } from "@/utils/imageUtils";
 import { html } from "code-tag";
 
 export const introductionData: AlternatingSectionInfo = {
@@ -24,10 +18,10 @@ export const introductionData: AlternatingSectionInfo = {
       `,
       imageInfo: [
         {
-          imagePath: cppLogo,
+          imagePath: `${ICONS_PATH}/CPP_Logo.png`,
         },
         {
-          imagePath: reactLogo,
+          imagePath: `${ICONS_PATH}/React_Logo.png`,
         },
       ],
     },
@@ -48,11 +42,11 @@ export const currentProjectsData: AlternatingSectionInfo = {
       `,
       imageInfo: [
         {
-          imagePath: unityLogo,
+          imagePath: `${ICONS_PATH}/Unity_Logo.png`,
           imageSize: ImageSize.SMALL,
         },
         {
-          imagePath: csharpLogo,
+          imagePath: `${ICONS_PATH}/CSharp_Logo.png`,
           imageSize: ImageSize.SMALL,
         },
       ],
@@ -68,11 +62,11 @@ export const currentProjectsData: AlternatingSectionInfo = {
       `,
       imageInfo: [
         {
-          imagePath: minecraftLogo,
+          imagePath: `${ICONS_PATH}/Minecraft_Logo.webp`,
           imageSize: ImageSize.SMALL,
         },
         {
-          imagePath: javaLogo,
+          imagePath: `${ICONS_PATH}/Java_Logo.png`,
           imageSize: ImageSize.SMALL,
         },
       ],
