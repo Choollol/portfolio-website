@@ -10,7 +10,12 @@ interface Props {
 
 const styles = createStyles({
   pageLink: {
-    margin: "0px 10px",
+    padding: "0px 10px",
+    display: "flex",
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
   },
   text: {
     fontSize: "1.1em",

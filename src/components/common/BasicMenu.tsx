@@ -2,13 +2,13 @@ import React, { ReactNode } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { createStyles, StyleProps } from "@/styles/styling";
+import { createStyles, mergeStyles, StyleProps } from "@/styles/styling";
 import { Box } from "@mui/material";
 
 interface Props {
   children: ReactNode[];
   buttonContent: ReactNode;
-  containerStyles?: StyleProps;
+  menuItemStyleOverrides?: StyleProps;
 }
 
 const styles = createStyles({
@@ -20,10 +20,16 @@ const styles = createStyles({
   menuItem: {
     backgroundColor: "hsla(0, 0%, 0%, 0)",
     color: "white",
+    padding: 0,
+    height: "1em",
   },
 });
 
-const BasicMenu = ({ children, buttonContent, containerStyles }: Props) => {
+const BasicMenu = ({
+  children,
+  buttonContent,
+  menuItemStyleOverrides,
+}: Props) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -33,8 +39,12 @@ const BasicMenu = ({ children, buttonContent, containerStyles }: Props) => {
     setAnchorEl(null);
   };
 
+  const menuItemStyles = menuItemStyleOverrides
+    ? mergeStyles(styles.menuItem, menuItemStyleOverrides)
+    : styles.menuItem;
+
   return (
-    <Box sx={containerStyles}>
+    <Box>
       <Button
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
@@ -57,7 +67,7 @@ const BasicMenu = ({ children, buttonContent, containerStyles }: Props) => {
         }}
       >
         {children.map((element, index) => (
-          <MenuItem key={index} onClick={handleClose} sx={styles.menuItem}>
+          <MenuItem key={index} onClick={handleClose} sx={menuItemStyles}>
             {element}
           </MenuItem>
         ))}

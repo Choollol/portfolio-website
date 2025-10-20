@@ -23,6 +23,9 @@ const styles = createStyles({
     backgroundColor: "hsla(0, 0%, 0%, 0.08)",
     borderBottom: "1px solid hsl(0, 0%, 86%)",
   },
+  menuItem: {
+    width: "200px",
+  },
 });
 
 const Header = () => {
@@ -43,7 +46,10 @@ const Header = () => {
   );
 
   const linkMenu = (
-    <BasicMenu buttonContent={<MenuIcon fontSize="large" />}>
+    <BasicMenu
+      buttonContent={<MenuIcon fontSize="large" />}
+      menuItemStyleOverrides={styles.menuItem}
+    >
       {...headerPageLinks}
     </BasicMenu>
   );
