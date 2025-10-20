@@ -1,4 +1,4 @@
-import MarkdownText from "@/components/common/MarkdownText";
+import MarkdownText from "@/components/MarkdownText";
 import ImageGroup from "@/components/ImageGroup";
 import useIsScreenSmall from "@/hooks/useIsScreenSmall";
 import { AlternatingParagraphAlign } from "@/utils/alternatingParagraphUtils";

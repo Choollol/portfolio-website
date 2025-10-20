@@ -1,9 +1,9 @@
 import { LinkCardInfo } from "@/utils/linkCardUtils";
 import LinkCard from "@/components/LinkCard";
-import PageTitle from "@/components/common/PageTitle";
+import PageTitle from "@/components/PageTitle";
 import { createStyles } from "@/styles/styling";
 import { Grid } from "@mui/material";
-import PageBody from "@/components/common/PageBody";
+import PageBody from "@/components/PageBody";
 
 interface Props {
   pageTitle: string;

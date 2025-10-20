@@ -1,8 +1,8 @@
 import PageSummary from "@/components/PageSummary";
 import { PageSummaryInfo } from "@/utils/pageUtils";
-import PageContentContainer from "@/components/common/PageContainer";
-import PageTitle from "@/components/common/PageTitle";
-import PageBody from "@/components/common/PageBody";
+import PageContentContainer from "@/components/PageContainer";
+import PageTitle from "@/components/PageTitle";
+import PageBody from "@/components/PageBody";
 import { Divider } from "@mui/material";
 import { createStyles } from "@/styles/styling";
 

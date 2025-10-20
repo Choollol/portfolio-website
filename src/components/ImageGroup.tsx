@@ -1,7 +1,7 @@
 import { createStyles } from "@/styles/styling";
 import { ImageInfo, ImageSize } from "@/utils/imageUtils";
 import { Grid, Stack } from "@mui/material";
-import Image from "@/components/common/Image";
+import Image from "@/components/Image";
 
 interface Props {
   imageInfo: ImageInfo[];

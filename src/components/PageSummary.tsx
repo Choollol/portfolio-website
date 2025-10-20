@@ -2,7 +2,7 @@ import useIsScreenSmall from "@/hooks/useIsScreenSmall";
 import { createStyles, mergeStyles } from "@/styles/styling";
 import { PageSummaryInfo } from "@/utils/pageUtils";
 import { Box, Link, Stack, Typography } from "@mui/material";
-import Image from "@/components/common/Image";
+import Image from "@/components/Image";
 import { useMemo } from "react";
 
 const styles = createStyles({

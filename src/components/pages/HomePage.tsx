@@ -1,6 +1,6 @@
 import AlternatingSection from "@/components/AlternatingSection";
 import * as homePageData from "@/data/page-data/home-page-data";
-import PageBody from "@/components/common/PageBody";
+import PageBody from "@/components/PageBody";
 import { createStyles } from "@/styles/styling";
 import { Box, Container, Typography } from "@mui/material";
 

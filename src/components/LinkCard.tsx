@@ -1,7 +1,7 @@
 import { LinkCardInfo } from "@/utils/linkCardUtils";
 import { Container, Link, Typography } from "@mui/material";
 import { createStyles } from "@/styles/styling";
-import MarkdownText from "@/components/common/MarkdownText";
+import MarkdownText from "@/components/MarkdownText";
 
 const styles = createStyles({
   cardContainer: {

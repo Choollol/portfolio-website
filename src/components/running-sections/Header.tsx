@@ -9,7 +9,7 @@ import HomePageLink from "../PageLinks/HomePageLink";
 import { AppBar, Stack } from "@mui/material";
 import { createStyles } from "@/styles/styling";
 import { useMemo } from "react";
-import BasicMenu from "@/components/common/BasicMenu";
+import BasicMenu from "@/components/BasicMenu";
 import MenuIcon from "@mui/icons-material/Menu";
 import useIsScreenSmall from "@/hooks/useIsScreenSmall";
 

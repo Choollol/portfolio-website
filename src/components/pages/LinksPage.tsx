@@ -1,7 +1,7 @@
 import { linksData } from "@/data/page-data/links-page-data";
-import PageTitle from "@/components/common/PageTitle";
-import PageContentContainer from "@/components/common/PageContainer";
-import SectionTitle from "@/components/common/SectionTitle";
+import PageTitle from "@/components/PageTitle";
+import PageContentContainer from "@/components/PageContainer";
+import SectionTitle from "@/components/SectionTitle";
 import { createStyles } from "@/styles/styling";
 import { Link, Typography } from "@mui/material";
 
