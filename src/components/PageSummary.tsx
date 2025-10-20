@@ -3,6 +3,7 @@ import { createStyles, mergeStyles } from "@/styles/styling";
 import { PageSummaryInfo } from "@/utils/pageUtils";
 import { Box, Link, Stack, Typography } from "@mui/material";
 import Image from "@/components/common/Image";
+import { useMemo } from "react";
 
 const styles = createStyles({
   summaryTitle: {
@@ -41,14 +42,20 @@ const PageSummary = ({
 }: PageSummaryInfo) => {
   const isScreenSmall = useIsScreenSmall();
 
-  const image =
-    imageInfo.imagePath != "" ? (
-      <Image src={imageInfo.imagePath} />
-    ) : (
-      <Box sx={mergeStyles(styles.noImageTextContainer, styles.imageContainer)}>
-        <Typography variant="body1">No Image</Typography>
-      </Box>
-    );
+  const image = useMemo(
+    () =>
+      imageInfo.imagePath != "" ? (
+        <Image src={imageInfo.imagePath} />
+      ) : (
+        <Box
+          sx={mergeStyles(styles.noImageTextContainer, styles.imageContainer)}
+        >
+          <Typography variant="body1">No Image</Typography>
+        </Box>
+      ),
+    // eslint-disable-next-line
+    []
+  );
 
   return (
     <Link href={targetUrl}>
