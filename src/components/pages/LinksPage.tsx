@@ -2,43 +2,38 @@ import { linksData } from "@/data/page-data/links-page-data";
 import PageTitle from "@/components/PageTitle";
 import PageContentContainer from "@/components/PageContainer";
 import SectionTitle from "@/components/SectionTitle";
+import ExternalLinkSection from "@/components/ExternalLinkSection";
+import PageBody from "@/components/PageBody";
 import { createStyles } from "@/styles/styling";
-import { Link, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 const styles = createStyles({
-  text: {
-    fontSize: "1.2em",
-    textAlign: "center",
-    margin: "40px 0px",
+  linkSectionContainer: {
+    margin: "20px 0px",
   },
 });
 
 const LinksPage = () => {
   return (
-    <>
+    <PageBody>
       <PageTitle text="Links" />
       {linksData.map((linksSectionData, index) => {
         return (
           <PageContentContainer key={index}>
             <SectionTitle text={linksSectionData.title} />
-            {linksSectionData.text.map((text, index) => {
-              return (
-                <Typography variant="body1" sx={styles.text} key={index}>
-                  {text.doShowLink ? (
-                    <>
-                      {text.label}:&nbsp;
-                      <Link href={text.url}>{text.url}</Link>
-                    </>
-                  ) : (
-                    <Link href={text.url}>{text.label}</Link>
-                  )}
-                </Typography>
-              );
-            })}
+            {linksSectionData.body.map((body, index) => (
+              <Box key={index} sx={styles.linkSectionContainer}>
+                <ExternalLinkSection
+                  imagePath={body.imageInfo.imagePath}
+                  label={body.label}
+                  url={body.url}
+                />
+              </Box>
+            ))}
           </PageContentContainer>
         );
       })}
-    </>
+    </PageBody>
   );
 };
 

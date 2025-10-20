@@ -22,7 +22,7 @@ const PageBody = ({ children, normalMaxWidthPercent = 70 }: Props) => {
   const isScreenSmall = useIsScreenSmall();
 
   const containerStyles = mergeStyles(styles.container, {
-    maxWidth: isScreenSmall ? "90%" : `${normalMaxWidthPercent}%`,
+    width: isScreenSmall ? "90%" : `${normalMaxWidthPercent}%`,
   });
 
   return <Box sx={containerStyles}>{children}</Box>;
