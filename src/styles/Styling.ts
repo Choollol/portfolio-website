@@ -3,7 +3,8 @@ import { SxProps } from "@mui/material";
 export type StyleProps = SxProps;
 
 interface Styles {
-  [key: string]: StyleProps;
+  // eslint-disable-next-line
+  [key: string]: StyleProps | ((...args: any[]) => StyleProps);
 }
 
 /**
