@@ -2,12 +2,26 @@ import { GAME_THUMBNAILS_PATH } from "@/utils/imageUtils";
 import { PageSummaryInfo } from "@/utils/pageUtils";
 import { html } from "code-tag";
 
-
 function getGameUrl(path: string) {
   return `https://choollol.itch.io/${path}`;
 }
 
 export const gamesSummaryData: PageSummaryInfo[] = [
+  {
+    imageInfo: {
+      imagePath: `${GAME_THUMBNAILS_PATH}/Through_Decay_Thumbnail.png`,
+    },
+    title: "Through Decay",
+    text: html`
+      I developed this game along with one other friend in 48 hours as our
+      submission to "Fall 2025 VGDC ZotJam" whose theme was "Beyond the Grave."
+      We made a puzzle-platformer where the player starts as a Human, becomes a
+      Zombie when they die, then becomes a Skeleton after they die a third time.
+      The player must use each species' unique abilities and interactions with
+      the environment to solve puzzles.
+    `,
+    targetUrl: getGameUrl("through-decay"),
+  },
   {
     imageInfo: { imagePath: `${GAME_THUMBNAILS_PATH}/Towhere_Thumbnail.png` },
     title: "To Where We Were",
@@ -31,7 +45,9 @@ export const gamesSummaryData: PageSummaryInfo[] = [
     targetUrl: "https://ctnp.itch.io/hedgehogs-dilemma",
   },
   {
-    imageInfo: { imagePath: `${GAME_THUMBNAILS_PATH}/Ghostly_Reflection_Thumbnail.png` },
+    imageInfo: {
+      imagePath: `${GAME_THUMBNAILS_PATH}/Ghostly_Reflection_Thumbnail.png`,
+    },
     title: "A Ghostly Reflection",
     text: html`
       This game, a puzzle-platformer, was my submission to "Fall 2024 VGDC
@@ -43,7 +59,9 @@ export const gamesSummaryData: PageSummaryInfo[] = [
     targetUrl: getGameUrl("a-ghostly-reflection"),
   },
   {
-    imageInfo: { imagePath: `${GAME_THUMBNAILS_PATH}/Left_Behind_Thumbnail.png` },
+    imageInfo: {
+      imagePath: `${GAME_THUMBNAILS_PATH}/Left_Behind_Thumbnail.png`,
+    },
     title: "Left Behind",
     text: html`
       After taking a break from game development, I decided to return to it and
