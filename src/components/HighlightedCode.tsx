@@ -1,6 +1,6 @@
 import { StyleProps } from "@/styles/styling";
+import { Typography } from "@mui/material";
 import { Highlight } from "prism-react-renderer";
-import { CSSProperties } from "react";
 
 interface Props {
   code: string;
@@ -11,7 +11,7 @@ const HighlightedCode = ({ code, sx }: Props) => {
   return (
     <Highlight code={code} language="tsx">
       {({ tokens, getLineProps, getTokenProps }) => (
-        <pre style={sx as unknown as CSSProperties}>
+        <Typography component="pre" sx={sx}>
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line })}>
               {line.map((token, key) => (
@@ -19,7 +19,7 @@ const HighlightedCode = ({ code, sx }: Props) => {
               ))}
             </div>
           ))}
-        </pre>
+        </Typography>
       )}
     </Highlight>
   );
