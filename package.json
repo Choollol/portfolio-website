@@ -19,6 +19,7 @@
     "dayjs": "^1.11.13",
     "mui-image": "^1.0.9",
     "mui-markdown": "^2.0.3",
+    "prism-react-renderer": "^2.4.1",
     "react": "^19.0.0",
     "react-devtools": "^7.0.1",
     "react-dom": "^19.0.0",
