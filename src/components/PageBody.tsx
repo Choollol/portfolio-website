@@ -13,8 +13,8 @@ const styles = createStyles({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    margin: "20px 0px",
-    padding: 0,
+    padding: "20px 0px",
+    position: "relative",
   },
 });
 
