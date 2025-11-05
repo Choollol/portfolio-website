@@ -12,13 +12,13 @@ export const introductionData: AlternatingSectionInfo = {
         I am passionate about software development and have been programming for
         a little over four years. Recently, I have been focused on front-end web
         development and game development, though I have a wide variety of coding
-        interests. Some programming languages I know are C#, C, C++, Java,
-        Python, and JavaScript/TypeScript. I'm also working on personal projects
-        to apply and improve my skills in my own time.
+        interests. Some programming languages I know are TypeScript/JavaScript,
+        C#, C++, C, Python, and Java. I'm also working on personal and
+        collaborative projects to apply and improve my skills in my own time.
       `,
       imageInfo: [
         {
-          imagePath: `${ICONS_PATH}/CPP_Logo.png`,
+          imagePath: `${ICONS_PATH}/Typescript_Logo.png`,
         },
         {
           imagePath: `${ICONS_PATH}/React_Logo.png`,
