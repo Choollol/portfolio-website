@@ -224,7 +224,7 @@ export default theme;`}function Rb(t){return typeof t=="number"?`${(t*100).toFix
         interests. Some programming languages I know are TypeScript/JavaScript,
         C#, C++, C, Python, and Java. I'm also working on personal and
         collaborative projects to apply and improve my skills in my own time.
-      `,imageInfo:[{imagePath:`${fa}/Typescript_Logo.png`},{imagePath:`${fa}/React_Logo.png`}]}]},W5={title:"Current Projects",startingAlign:kl.RIGHT,info:[{text:Et`
+      `,imageInfo:[{imagePath:`${fa}/Typescript_Logo.png`},{imagePath:`${fa}/CPP_Logo.png`}]}]},W5={title:"Current Projects",startingAlign:kl.RIGHT,info:[{text:Et`
         I'm currently acting as lead programmer for a game-development team that
         is using Unity3D and C#. We are developing a narrative-driven story game
         with branching dialogue system. Some other features I have added are an
