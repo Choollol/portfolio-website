@@ -33,10 +33,10 @@ const Header = () => {
 
   const headerPageLinks = useMemo(
     () => [
-      <HeaderPageLink targetPagePath={GAMES_PAGE_PATH}>Games</HeaderPageLink>,
       <HeaderPageLink targetPagePath={PROJECTS_PAGE_PATH}>
         Projects
       </HeaderPageLink>,
+      <HeaderPageLink targetPagePath={GAMES_PAGE_PATH}>Games</HeaderPageLink>,
       <HeaderPageLink targetPagePath={LINKS_PAGE_PATH}>Links</HeaderPageLink>,
       <HeaderPageLink targetPagePath={CONTACT_PAGE_PATH}>
         Contact
