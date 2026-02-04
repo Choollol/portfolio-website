@@ -14,11 +14,6 @@ export const linksData: LinksSectionData[] = [
     title: "Profiles",
     body: [
       {
-        imageInfo: { imagePath: `${ICONS_PATH}/Itch_Logo.png` },
-        label: "Itch.io",
-        url: "https://choollol.itch.io/",
-      },
-      {
         imageInfo: { imagePath: `${ICONS_PATH}/Github_Logo.png` },
         label: "GitHub",
         url: "https://github.com/Choollol/",
@@ -27,6 +22,11 @@ export const linksData: LinksSectionData[] = [
         imageInfo: { imagePath: `${ICONS_PATH}/Linkedin_Logo.png` },
         label: "LinkedIn",
         url: "https://www.linkedin.com/in/christopher-sun1",
+      },
+      {
+        imageInfo: { imagePath: `${ICONS_PATH}/Itch_Logo.png` },
+        label: "Itch.io",
+        url: "https://choollol.itch.io/",
       },
     ],
   },
