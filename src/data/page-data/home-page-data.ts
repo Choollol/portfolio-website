@@ -34,6 +34,25 @@ export const currentProjectsData: AlternatingSectionInfo = {
   info: [
     {
       text: html`
+        I'm part of a team of 13 that is developing
+        [AntAlmanac](https://antalmanac.com/), a web application used by over
+        16,000 UCI students for scheduling classes. It's a project that's part
+        of the ICSSC (Information and Computer Sciences Student Council) that is
+        built with TypeScript, React, Next.js, and many other technologies.
+      `,
+      imageInfo: [
+        {
+          imagePath: `${ICONS_PATH}/AntAlmanac_Logo.png`,
+          imageSize: ImageSize.SMALL,
+        },
+        {
+          imagePath: `${ICONS_PATH}/ICSSC_Logo.png`,
+          imageSize: ImageSize.SMALL,
+        },
+      ],
+    },
+    {
+      text: html`
         I'm also a Research Assistant at the [Sleep, Learning, and Emotion in
         Pediatrics (SLEEP) Lab](https://sleepinpediatrics.com) here at UC
         Irvine. I am aiding in the development of their MindCycle mobile app,
