@@ -9,6 +9,20 @@ function getGameUrl(path: string) {
 export const gamesSummaryData: PageSummaryInfo[] = [
   {
     imageInfo: {
+      imagePath: `${GAME_THUMBNAILS_PATH}/Landed_Thumbnail.jpg`,
+    },
+    title: "Landed",
+    text: html`
+      I was the lead programmer for a Delighted Games, a game-development team
+      with 14 people. We a narrative-driven story game with many complex systems
+      including branching dialogue and an NPC system with 12 characters. I also
+      created developer tools like an easy-to-use internal voice lines system to
+      improve developer experience.
+    `,
+    targetUrl: "https://store.steampowered.com/app/3871950/LANDED",
+  },
+  {
+    imageInfo: {
       imagePath: `${GAME_THUMBNAILS_PATH}/Through_Decay_Thumbnail.png`,
     },
     title: "Through Decay",

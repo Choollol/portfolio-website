@@ -34,25 +34,6 @@ export const currentProjectsData: AlternatingSectionInfo = {
   info: [
     {
       text: html`
-        I'm currently acting as lead programmer for a game-development team that
-        is using Unity3D and C#. We are developing a narrative-driven story game
-        with branching dialogue system. Some other features I have added are an
-        NPC scheduling system, an easy-to-use internal voice lines system, and
-        an interactable-object system.
-      `,
-      imageInfo: [
-        {
-          imagePath: `${ICONS_PATH}/Unity_Logo.png`,
-          imageSize: ImageSize.SMALL,
-        },
-        {
-          imagePath: `${ICONS_PATH}/CSharp_Logo.png`,
-          imageSize: ImageSize.SMALL,
-        },
-      ],
-    },
-    {
-      text: html`
         I'm also a Research Assistant at the [Sleep, Learning, and Emotion in
         Pediatrics (SLEEP) Lab](https://sleepinpediatrics.com) here at UC
         Irvine. I am aiding in the development of their MindCycle mobile app,
