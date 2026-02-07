@@ -8,13 +8,11 @@ export const introductionData: AlternatingSectionInfo = {
   info: [
     {
       text: html`
-        I'm Christopher Sun, a second-year Computer Science major at UC Irvine.
-        I am passionate about software development and have been programming for
-        a little over four years. Recently, I have been focused on front-end web
-        development and game development, though I have a wide variety of coding
-        interests. Some programming languages I know are TypeScript/JavaScript,
-        C#, C++, C, Python, and Java. I'm also working on personal and
-        collaborative projects to apply and improve my skills in my own time.
+        Hi, I'm Christopher Sun, a second-year Computer Science major at UC
+        Irvine. I am passionate about developing usable and maintainable
+        software and have recently been focused on front-end web development,
+        though I have a wide variety of coding interests. I'm also currently
+        working on multiple projects to apply and improve my skills.
       `,
       imageInfo: [
         {
