@@ -3,6 +3,14 @@ import { html } from "code-tag";
 
 export const projectCards: LinkCardInfo[] = [
   {
+    title: "PickSome Playlist Maker",
+    text: html`
+      A website to create YouTube playlists by randomly picking from a user's playlist library. My goal was to gain a deeper understanding of technologies and concepts like Next.js and user authentication. I also personally use YouTube to listen to music, which was part of why I chose this idea!
+    `,
+    targetUrl:
+      "https://picksome-playlist-maker.vercel.app/",
+  },
+  {
     title: "Muna's Menagerie",
     text: html`
       This is a browser extension that adds pets to your browser! I developed it
