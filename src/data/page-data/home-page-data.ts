@@ -10,8 +10,8 @@ export const introductionData: AlternatingSectionInfo = {
       text: html`
         Hi, I'm Christopher Sun, a second-year Computer Science major at UC
         Irvine. I am passionate about developing usable and maintainable
-        software and have recently been focused on front-end web development,
-        though I have a wide variety of coding interests. I'm also currently
+        software and have recently been focused on fullstack web development,
+        though I have a wide variety of technical interests. I'm also currently
         working on multiple projects to apply and improve my skills.
       `,
       imageInfo: [
