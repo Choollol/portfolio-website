@@ -5,10 +5,13 @@ export const projectCards: LinkCardInfo[] = [
   {
     title: "PickSome Playlist Maker",
     text: html`
-      A website to create YouTube playlists by randomly picking from a user's playlist library. My goal was to gain a deeper understanding of technologies and concepts like Next.js and user authentication. I also personally use YouTube to listen to music, which was part of why I chose this idea!
+      A website to create YouTube playlists by randomly picking from a user's
+      playlist library. My goal was to gain a deeper understanding of
+      technologies and concepts like Next.js and user authentication. I also
+      personally use YouTube to listen to music, which was part of why I chose
+      this idea!
     `,
-    targetUrl:
-      "https://picksome-playlist-maker.vercel.app/",
+    targetUrl: "https://picksome-playlist-maker.vercel.app/",
   },
   {
     title: "Muna's Menagerie",
@@ -33,9 +36,9 @@ export const projectCards: LinkCardInfo[] = [
   {
     title: "Lox Interpreters",
     text: html`
-      Following along Robert Nystrom's book *Crafting Interpreters*, I
-      coded two interpreters for a language called Lox. CPPLox, coded in C++, is
-      a tree-walk interpreter and is simpler but slower. CLox, coded in C, is a
+      Following along Robert Nystrom's book *Crafting Interpreters*, I coded two
+      interpreters for a language called Lox. CPPLox, coded in C++, is a
+      tree-walk interpreter and is simpler but slower. CLox, coded in C, is a
       bytecode virtual machine and is more complex but much faster.
     `,
     targetUrl: "https://github.com/Choollol/CLox",
