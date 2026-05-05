@@ -18,7 +18,7 @@ const styles = createStyles({
   },
 });
 
-const PageBody = ({ children, normalMaxWidthPercent = 70 }: Props) => {
+const PageBody = ({ children, normalMaxWidthPercent = 80 }: Props) => {
   const isScreenTiny = useIsScreenTiny();
 
   const containerStyles = mergeStyles(styles.container, {
