@@ -1,9 +1,9 @@
 import MarkdownText from "@/components/MarkdownText";
 import ImageGroup from "@/components/ImageGroup";
-import useIsScreenTiny from "@/hooks/useIsScreenTiny";
 import { AlternatingParagraphAlign } from "@/utils/alternatingParagraphUtils";
 import { ImageInfo } from "@/utils/imageUtils";
 import { Grid } from "@mui/material";
+import useIsScreenSmall from "@/hooks/useIsScreenSmall";
 
 interface Props {
   text: string;
@@ -12,9 +12,11 @@ interface Props {
 }
 
 const AlternatingParagraph = ({ text, align, imageInfo }: Props) => {
-  const isScreenTiny = useIsScreenTiny();
+  const isScreenSmall = useIsScreenSmall();
 
-  const imageGroup = isScreenTiny ? null : <ImageGroup imageInfo={imageInfo} />;
+  const imageGroup = isScreenSmall ? null : (
+    <ImageGroup imageInfo={imageInfo} />
+  );
 
   return (
     <Grid container rowSpacing={6} columnSpacing={10}>
