@@ -32,7 +32,7 @@ export const currentProjectsData: AlternatingSectionInfo = {
   info: [
     {
       text: html`
-        I'm part of a team of 13 that is developing
+        I'm part of a team that is developing
         [AntAlmanac](https://antalmanac.com/), a web application used by over
         16,000 UCI students for scheduling classes. It's a project that's part
         of the ICSSC (Information and Computer Sciences Student Council) that is
@@ -53,10 +53,11 @@ export const currentProjectsData: AlternatingSectionInfo = {
       text: html`
         I'm also a Research Assistant at the [Sleep, Learning, and Emotion in
         Pediatrics (SLEEP) Lab](https://sleepinpediatrics.com) here at UC
-        Irvine. I am aiding in the development of their MindCycle mobile app,
-        created with Unity, to help collect data. I am also developing Minecraft
-        plugins and addons in Java and TypeScript for the lab to help test
-        spatial awareness and memory.
+        Irvine. I am developing Minecraft addons with TypeScript used to study
+        spatial awareness and memory, augmented by numerous shell scripts and a
+        Node.js server. I am also aiding in the development of their MindCycle
+        mobile app, created with Unity and C#, which is used to study and
+        collect data about sleep and cognition.
       `,
       imageInfo: [
         {
@@ -64,7 +65,7 @@ export const currentProjectsData: AlternatingSectionInfo = {
           imageSize: ImageSize.SMALL,
         },
         {
-          imagePath: `${ICONS_PATH}/Java_Logo.png`,
+          imagePath: `${ICONS_PATH}/CSharp_Logo.png`,
           imageSize: ImageSize.SMALL,
         },
       ],
