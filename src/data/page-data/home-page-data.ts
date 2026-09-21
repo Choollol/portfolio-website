@@ -49,6 +49,27 @@ export const currentProjectsData: AlternatingSectionInfo = {
         },
       ],
     },
+    {
+      text: html`
+        I'm also working on improving [PickSome Playlist
+        Maker](https://picksome-playlist-maker.vercel.app/), a website I
+        developed to randomly create playlists of videos already in a user's
+        YouTube library. I use YouTube for music, so this gave me a new way to
+        shuffle the songs I listen to. The base app is in place and I'm now
+        adding nice-to-have features like saving user preferences to a database
+        and searching for videos by keywords.
+      `,
+      imageInfo: [
+        {
+          imagePath: `${ICONS_PATH}/YouTube_Logo.png`,
+          imageSize: ImageSize.SMALL,
+        },
+        {
+          imagePath: `${ICONS_PATH}/PickSome_Logo.png`,
+          imageSize: ImageSize.SMALL,
+        },
+      ],
+    },
   ],
 };
 
