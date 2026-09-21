@@ -8,11 +8,11 @@ export const introductionData: AlternatingSectionInfo = {
   info: [
     {
       text: html`
-        Hi, I'm Christopher Sun, a second-year Computer Science major at UC
-        Irvine. I am passionate about developing usable and maintainable
-        software and have recently been focused on fullstack web development,
-        though I have a wide variety of technical interests. I'm also currently
-        working on multiple projects to apply and improve my skills.
+        Hi, I'm Chris, a third-year Computer Science major at UC Irvine. I am
+        passionate about developing usable and maintainable software and have
+        recently been focused on fullstack web development, though I have a wide
+        variety of technical interests. I'm also currently working on multiple
+        projects to apply and improve my skills.
       `,
       imageInfo: [
         {
@@ -32,9 +32,9 @@ export const currentProjectsData: AlternatingSectionInfo = {
   info: [
     {
       text: html`
-        I'm part of a team that is developing
+        I'm leading a team that is developing
         [AntAlmanac](https://antalmanac.com/), a web application used by over
-        16,000 UCI students for scheduling classes. It's a project that's part
+        17,000 UCI students for scheduling classes. It's a project that's part
         of the ICSSC (Information and Computer Sciences Student Council) that is
         built with TypeScript, React, Next.js, and many other technologies.
       `,
