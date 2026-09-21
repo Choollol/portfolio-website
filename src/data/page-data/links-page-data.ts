@@ -30,14 +30,4 @@ export const linksData: LinksSectionData[] = [
       },
     ],
   },
-  {
-    title: "Documentation",
-    body: [
-      {
-        imageInfo: { imagePath: `${ICONS_PATH}/Unity_Logo.png` },
-        label: "Unity Messenger System",
-        url: "https://docs.google.com/document/d/1JoiURcQxYknvDlhJPOnOCaJGMLsFv32iPlezUkGKPaY/edit?usp=sharing",
-      },
-    ],
-  },
 ];
