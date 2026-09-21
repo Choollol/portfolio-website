@@ -13,7 +13,7 @@ const styles = createStyles({
     flexDirection: "column",
     alignItems: "center",
     textAlign: "center",
-    marginBottom: "100px",
+    marginBottom: 5,
   },
   websiteSubheading: {
     marginTop: "20px",
@@ -30,7 +30,7 @@ const HomePage = () => {
   const normalizedScrollPos = useNormalizedScrollPosition();
   const backgroundCode = homePageData.backgroundText.substring(
     0,
-    homePageData.backgroundText.length * normalizedScrollPos
+    homePageData.backgroundText.length * normalizedScrollPos,
   );
   return (
     <PageBody>
