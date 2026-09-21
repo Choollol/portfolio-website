@@ -49,27 +49,6 @@ export const currentProjectsData: AlternatingSectionInfo = {
         },
       ],
     },
-    {
-      text: html`
-        I'm also a Research Assistant at the [Sleep, Learning, and Emotion in
-        Pediatrics (SLEEP) Lab](https://sleepinpediatrics.com) here at UC
-        Irvine. I am developing Minecraft addons with TypeScript used to study
-        spatial awareness and memory, augmented by numerous shell scripts and a
-        Node.js server. I am also aiding in the development of their MindCycle
-        mobile app, created with Unity and C#, which is used to study and
-        collect data about sleep and cognition.
-      `,
-      imageInfo: [
-        {
-          imagePath: `${ICONS_PATH}/Minecraft_Logo.webp`,
-          imageSize: ImageSize.SMALL,
-        },
-        {
-          imagePath: `${ICONS_PATH}/CSharp_Logo.png`,
-          imageSize: ImageSize.SMALL,
-        },
-      ],
-    },
   ],
 };
 

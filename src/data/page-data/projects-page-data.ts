@@ -3,6 +3,16 @@ import { html } from "code-tag";
 
 export const projectCards: LinkCardInfo[] = [
   {
+    title: "SLEEP Lab",
+    text: html`
+      I worked as a Research Assistant at the Sleep, Learning, and Emotion in
+      Pediatrics (SLEEP) Lab at UC Irvine. My main responsibility was developing
+      a Minecraft addon with TypeScript used to study spatial awareness and
+      memory, augmented by numerous shell scripts and a Node.js server.
+    `,
+    targetUrl: "https://sleepinpediatrics.com/",
+  },
+  {
     title: "PickSome Playlist Maker",
     text: html`
       A website to create YouTube playlists by randomly picking from a user's
