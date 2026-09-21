@@ -19,7 +19,7 @@ export const introductionData: AlternatingSectionInfo = {
           imagePath: `${ICONS_PATH}/Typescript_Logo.png`,
         },
         {
-          imagePath: `${ICONS_PATH}/CPP_Logo.png`,
+          imagePath: `${ICONS_PATH}/React_Logo.png`,
         },
       ],
     },
